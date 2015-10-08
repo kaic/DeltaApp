@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="ColorPrimary">#009688</color>
+    <color name="ColorPrimaryDark">#00796B</color>
+    <color name="LightPrimaryColor">#B2DFDB</color>
+    <color name="Text">#FFFFFF</color>
+    <color name="AccentColor">#4CAF50</color>
+    <color name="PrimaryText">#212121</color>
+    <color name="SecondaryText">#727272</color>
+    <color name="DividerColor">#B6B6B6</color>
+    <color name="tabsScrollColor">#B2DFDB</color>
+
+    <color name="transparent_bg">#fff</color>
+    <color name="text_selected">#888</color>
+
+</resources>

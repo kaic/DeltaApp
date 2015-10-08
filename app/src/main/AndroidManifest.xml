@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.plataformanext.delta" >
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".bluetooth.ListaDispositivos"
+            android:label="Dispositivos Pareados"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name=".calculos.Conversao"
+            android:label="@string/title_activity_conversao"
+            android:parentActivityName=".Cinematica" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Cinematica" />
+        </activity>
+        <activity
+            android:name=".calculos.VelocidadeMedia"
+            android:label="@string/title_activity_velocidade_media"
+            android:parentActivityName=".Cinematica" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Cinematica" />
+        </activity>
+        <activity
+            android:name=".Cinematica"
+            android:label="@string/title_activity_cinematica"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".Dinamica"
+            android:label="@string/title_activity_dinamica"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.plataformanext.delta.MainActivity" />
+        </activity>
+        <activity
+            android:name=".calculos.fhe"
+            android:label="@string/title_activity_fhe"
+            android:parentActivityName=".Cinematica" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.plataformanext.delta.Cinematica" />
+        </activity>
+        <activity
+            android:name=".aulas.AulaTeste"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_aula_teste"
+            android:parentActivityName=".Cinematica"
+            android:screenOrientation="landscape" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.plataformanext.delta.Cinematica" />
+        </activity>
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Estatica"
+            android:label="@string/title_activity_estatica"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.plataformanext.delta.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Hidrostatica"
+            android:label="@string/title_activity_hidrostatica"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.plataformanext.delta.MainActivity" />
+        </activity>
+        <activity
+            android:name=".FG"
+            android:label="@string/title_activity_fg"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.plataformanext.delta.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

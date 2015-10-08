@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Delta</string>
+    <string name="action_settings">Configurações</string>
+    <string name="materias">Matérias</string>
+    <string name="conteudos">Conteudos</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_conversao">ConversaoActivity</string>
+    <string name="title_activity_lista">Lista Dispositivos</string>
+
+    <string name="title_activity_calculos">Calculos</string>
+    <string name="title_activity_velocidade_media">Velocidade Media</string>
+    <string name="title_activity_cinematica">Cinematica</string>
+    <string name="title_activity_dinamica">Dinamica</string>
+    <string name="title_activity_fhe">fhe</string>
+    <string name="title_activity_aula_teste">Aula Teste</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="splash">Plataforma de Ensino Interativo de Mecanica NEXT</string>
+    <string name="title_activity_estatica">Estatica</string>
+    <string name="title_activity_hidrostatica">Hidrostatica</string>
+    <string name="title_activity_fg">Força Gravitacional</string>
+
+
+</resources>
