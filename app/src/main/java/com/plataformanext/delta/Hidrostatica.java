@@ -1,13 +1,11 @@
 package com.plataformanext.delta;
 
+import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.MenuItem;
 
-import com.plataformanext.delta.adapters.AbasPagerAdapterDinamica;
 import com.plataformanext.delta.adapters.AbasPagerAdapterHidrostatica;
 import com.plataformanext.delta.extras.SlidingTabLayout;
 
@@ -17,7 +15,7 @@ public class Hidrostatica extends AppCompatActivity {
     ViewPager pager;
     AbasPagerAdapterHidrostatica adapter;
     SlidingTabLayout tabs;
-    CharSequence titles[]={"AULAS","DEMONSTRAÇÃO","CALCULDORA"};
+    CharSequence titles[]={"AULAS","DEMONSTRAÇÃO","CALCULADORA"};
     int numbOftabs = 3;
 
     @Override

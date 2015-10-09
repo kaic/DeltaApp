@@ -1,5 +1,6 @@
 package com.plataformanext.delta.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -9,6 +10,8 @@ import android.view.ViewGroup;
 
 import com.plataformanext.delta.R;
 import com.plataformanext.delta.adapters.DemoAdapter;
+import com.plataformanext.delta.calculos.Conversao;
+import com.plataformanext.delta.calculos.VelocidadeMedia;
 import com.plataformanext.delta.domain.Demo;
 import com.plataformanext.delta.interfaces.RecyclerViewOnClickListenerHack;
 
@@ -58,7 +61,16 @@ public class CalculadoraCinematica extends android.support.v4.app.Fragment  impl
 
     @Override
     public void onClickListener(View view, int position) {
+        Intent i;
         switch (position){
+            case 0:
+                i = new Intent(getActivity(), Conversao.class);
+                startActivity(i);
+                break;
+            case 1:
+                i = new Intent(getActivity(), VelocidadeMedia.class);
+                startActivity(i);
+                break;
 
         }
     }

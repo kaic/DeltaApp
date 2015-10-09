@@ -15,7 +15,7 @@ public class Dinamica extends AppCompatActivity {
     ViewPager pager;
     AbasPagerAdapterDinamica adapter;
     SlidingTabLayout tabs;
-    CharSequence titles[]={"AULAS","DEMONSTRAÇÃO","CALCULDORA"};
+    CharSequence titles[]={"AULAS","DEMONSTRAÇÃO","CALCULADORA"};
     int numbOftabs = 3;
 
     @Override
