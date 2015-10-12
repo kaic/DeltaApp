@@ -17,6 +17,7 @@
     <string name="title_activity_fhe">fhe</string>
     <string name="title_activity_aula_teste">Aula Teste</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="title_activity_device_list">Axis</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="splash">Plataforma de Ensino Interativo de Mecanica NEXT</string>
@@ -24,5 +25,7 @@
     <string name="title_activity_hidrostatica">Hidrostatica</string>
     <string name="title_activity_fg">Força Gravitacional</string>
 
+    <string name="none_paired">Nenhum dispositivo foi pareado</string>
+    <string name="title_activity_axis_core">AxisCore</string>
 
 </resources>
