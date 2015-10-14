@@ -3,8 +3,43 @@
     android:layout_height="match_parent"
     tools:context="com.plataformanext.delta.fragments.DemoCinematica">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <com.github.clans.fab.FloatingActionMenu xmlns:fab="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        fab:menu_icon="@drawable/ic_bluetooth"
+        fab:menu_colorNormal="@color/ColorPrimary"
+        fab:menu_colorPressed="@color/ColorPrimaryDark"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_singleLine="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabCon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_bluetooth_con"
+            fab:fab_size="mini"
+            fab:fab_label="Conectar Axis"
+            fab:fab_colorNormal="@color/ColorPrimary"
+            fab:fab_colorPressed="@color/ColorPrimaryDark"
+            android:nestedScrollingEnabled="false"
+            android:onClick="Axis" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_bluetooth_desc"
+            fab:fab_size="mini"
+            fab:fab_label="Desconectar Axis"
+            fab:fab_colorNormal="@color/ColorPrimary"
+            fab:fab_colorPressed="@color/ColorPrimaryDark"
+            android:nestedScrollingEnabled="false"
+            android:onClick="desconectarAxis" />
+    </com.github.clans.fab.FloatingActionMenu>
 
 </FrameLayout>

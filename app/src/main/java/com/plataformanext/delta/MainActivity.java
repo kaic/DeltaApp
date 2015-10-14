@@ -2,7 +2,6 @@ package com.plataformanext.delta;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,9 +10,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Toast;
 
-import com.github.clans.fab.FloatingActionMenu;
 import com.plataformanext.delta.adapters.MateriasAdapter;
-import com.plataformanext.delta.axis.DeviceListActivity;
 import com.plataformanext.delta.domain.Materias;
 import com.plataformanext.delta.interfaces.RecyclerViewOnClickListenerHack;
 
@@ -24,7 +21,6 @@ import java.util.List;
 
 
 public class MainActivity extends ActionBarActivity implements RecyclerViewOnClickListenerHack {
-    private FloatingActionMenu fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +30,12 @@ public class MainActivity extends ActionBarActivity implements RecyclerViewOnCli
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
 
-        fab = (FloatingActionMenu) (findViewById(R.id.fab));
 
         //CARDS
         RecyclerView mCardView = (RecyclerView) findViewById(R.id.rv_card);
         mCardView.setHasFixedSize(true);
-        mCardView.setOnScrollListener(new RecyclerView.OnScrollListener() {
+
+        /*mCardView.setOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
@@ -56,7 +52,7 @@ public class MainActivity extends ActionBarActivity implements RecyclerViewOnCli
                 }
 
             }
-        });
+        });*/
 
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
@@ -107,17 +103,6 @@ public class MainActivity extends ActionBarActivity implements RecyclerViewOnCli
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return super.onCreateOptionsMenu(menu);
-    }
-
-
-    public void Axis(View view) {
-        Intent i = new Intent(this, DeviceListActivity.class);
-        startActivity(i);
-        Snackbar.make(view, "Conectar Axis", Snackbar.LENGTH_SHORT).show();
-    }
-
-    public void desconectarAxis(View view) {
-        Snackbar.make(view, "Desconectar Axis", Snackbar.LENGTH_SHORT).show();
     }
 
 

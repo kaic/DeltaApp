@@ -83,7 +83,6 @@ public class DeviceListActivity extends Activity {
 
         if(mBtAdapter != null) {
             if (mBtAdapter.isEnabled()) {
-                Toast.makeText(getBaseContext(), "Bluetooth ligado", Toast.LENGTH_SHORT).show();
             } else {
                 Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
                 startActivityForResult(enableBtIntent, 1);
