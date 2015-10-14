@@ -104,6 +104,9 @@
         <activity
             android:name=".axis.AxisCore"
             android:label="@string/title_activity_axis_core" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.plataformanext.delta.axis.DeviceListActivity" />
         </activity>
     </application>
 

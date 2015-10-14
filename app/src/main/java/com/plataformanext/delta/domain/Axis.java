@@ -1,28 +1,40 @@
 package com.plataformanext.delta.domain;
 
-import com.plataformanext.delta.interfaces.EntidadePersistivel;
-
-public class Axis implements EntidadePersistivel {
+public class Axis  {
     private int id;
-    private String nome;
+    private String Data;
+    private float aceleracao;
 
     public Axis() {
         super();
         this.id = id;
-        this.nome = nome;
+        this.Data = Data;
+        this.aceleracao = aceleracao;
 
     }
 
-    public int getId(){
+    public int getId() {
         return id;
     }
-    public void setId(int id){
+
+    public void setId(int id) {
         this.id = id;
     }
-    public String getNome(){
-        return nome;
+
+    public String getData() {
+        return Data;
     }
-    public void setNome(String Enunciado){
-        this.nome = nome;
+
+    public void setData(String data) {
+        Data = data;
     }
+
+    public float getAceleracao() {
+        return aceleracao;
+    }
+
+    public void setAceleracao(float aceleracao) {
+        this.aceleracao = aceleracao;
+    }
+
 }

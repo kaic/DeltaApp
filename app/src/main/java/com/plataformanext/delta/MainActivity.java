@@ -9,13 +9,17 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Toast;
 
 import com.github.clans.fab.FloatingActionMenu;
 import com.plataformanext.delta.adapters.MateriasAdapter;
+import com.plataformanext.delta.axis.DeviceListActivity;
 import com.plataformanext.delta.domain.Materias;
 import com.plataformanext.delta.interfaces.RecyclerViewOnClickListenerHack;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 
@@ -63,6 +67,13 @@ public class MainActivity extends ActionBarActivity implements RecyclerViewOnCli
         adapter.setRecyclerViewOnClickListenerHack(this);
         mCardView.setAdapter(adapter);
 
+        Calendar c = Calendar.getInstance();
+        System.out.println("Current time => " + c.getTime());
+
+        SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
+        String formattedDate = df.format(c.getTime());
+        Toast.makeText(getBaseContext(), formattedDate, Toast.LENGTH_SHORT).show();
+
     }
 
     @Override
@@ -100,6 +111,8 @@ public class MainActivity extends ActionBarActivity implements RecyclerViewOnCli
 
 
     public void Axis(View view) {
+        Intent i = new Intent(this, DeviceListActivity.class);
+        startActivity(i);
         Snackbar.make(view, "Conectar Axis", Snackbar.LENGTH_SHORT).show();
     }
 
