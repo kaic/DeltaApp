@@ -1,25 +1,17 @@
 package com.plataformanext.delta.fragments;
 
 
-import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothDevice;
-import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.plataformanext.delta.R;
 import com.plataformanext.delta.adapters.DemoAdapter;
-import com.plataformanext.delta.adapters.MateriasAdapter;
 import com.plataformanext.delta.axis.DeviceListActivity;
-import com.plataformanext.delta.calculos.Conversao;
-import com.plataformanext.delta.calculos.VelocidadeMedia;
 import com.plataformanext.delta.demo.AcMediaDemo;
 import com.plataformanext.delta.demo.ConversaoDemo;
 import com.plataformanext.delta.demo.DeslocamentoDemo;
@@ -28,28 +20,26 @@ import com.plataformanext.delta.demo.FHEDemo;
 import com.plataformanext.delta.demo.FHVDemo;
 import com.plataformanext.delta.demo.TorriceliDemo;
 import com.plataformanext.delta.demo.VelocidadeDemo;
-import com.plataformanext.delta.domain.Calculadora;
 import com.plataformanext.delta.domain.Demo;
-import com.plataformanext.delta.domain.Materias;
 import com.plataformanext.delta.interfaces.RecyclerViewOnClickListenerHack;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class DemoCinematica extends android.support.v4.app.Fragment implements RecyclerViewOnClickListenerHack {
     private com.github.clans.fab.FloatingActionButton fab;
     private RecyclerView mCardDemo;
     private List<Demo> mListDemo;
+    public String address;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_demo_cinematica, container, false);
+
+        Intent intent = getActivity().getIntent();
+        address = intent.getStringExtra(DeviceListActivity.EXTRA_DEVICE_ADDRESS);
 
         fab = (com.github.clans.fab.FloatingActionButton) view.findViewById(R.id.fabCinematica);
 
@@ -93,34 +83,42 @@ public class DemoCinematica extends android.support.v4.app.Fragment implements R
         switch (position){
             case 0:
                 i = new Intent(getActivity(), ConversaoDemo.class);
+                i.putExtra("device address", address);
                 startActivity(i);
                 break;
             case 1:
                 i = new Intent(getActivity(), VelocidadeDemo.class);
+                i.putExtra("device address", address);
                 startActivity(i);
                 break;
             case 2:
                 i = new Intent(getActivity(), EHEDemo.class);
+                i.putExtra("device address", address);
                 startActivity(i);
                 break;
             case 3:
                 i = new Intent(getActivity(), DeslocamentoDemo.class);
+                i.putExtra("device address", address);
                 startActivity(i);
                 break;
             case 4:
                 i = new Intent(getActivity(), AcMediaDemo.class);
+                i.putExtra("device address", address);
                 startActivity(i);
                 break;
             case 5:
                 i = new Intent(getActivity(), FHVDemo.class);
+                i.putExtra("device address", address);
                 startActivity(i);
                 break;
             case 6:
                 i = new Intent(getActivity(), FHEDemo.class);
+                i.putExtra("device address", address);
                 startActivity(i);
                 break;
             case 7:
                 i = new Intent(getActivity(), TorriceliDemo.class);
+                i.putExtra("device address", address);
                 startActivity(i);
                 break;
 

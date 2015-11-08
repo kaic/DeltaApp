@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.plataformanext.delta.R;
+import com.plataformanext.delta.fragments.DemoCinematica;
 
 import java.util.Set;
 
@@ -72,7 +73,7 @@ public class DeviceListActivity extends Activity {
             String info = ((TextView) v).getText().toString();
             String address = info.substring(info.length() - 17);
 
-            Intent i = new Intent(DeviceListActivity.this, AxisCore.class);
+            Intent i = new Intent(DeviceListActivity.this, DemoCinematica.class);
             i.putExtra(EXTRA_DEVICE_ADDRESS, address);
             startActivity(i);
         }
