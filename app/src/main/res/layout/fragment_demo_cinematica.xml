@@ -10,19 +10,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:visibility="visible" />
+        android:visibility="invisible" />
 
-    <com.github.clans.fab.FloatingActionButton xmlns:fab="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/fabCinematica"
-        android:layout_width="wrap_content"
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:text="Conectar Axis"
+        android:id="@+id/btnAxisCinematica"
+        android:drawableLeft="@drawable/ic_bluetooth"
+        android:layout_gravity="center"
+        android:textColor="@color/Text" />
+
+    <ListView android:id="@+id/paired_devicesCinematica"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
-        android:src="@drawable/ic_bluetooth"
-        fab:fab_colorNormal="@color/ColorPrimary"
-        fab:fab_colorPressed="@color/ColorPrimaryDark"
-        fab:fab_label="Axis"
-        android:onClick="Axis"/>
+        android:stackFromBottom="false"
+        android:layout_weight="1"
+        android:visibility="invisible" />
 
-    </FrameLayout>
+</FrameLayout>
