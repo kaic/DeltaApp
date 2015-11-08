@@ -15,7 +15,7 @@ public class Dinamica extends AppCompatActivity {
     ViewPager pager;
     AbasPagerAdapterDinamica adapter;
     SlidingTabLayout tabs;
-    CharSequence titles[]={"AULAS","DEMONSTRAÇÃO","CALCULADORA"};
+    CharSequence titles[]={"AULAS","DEMO","CALCULADORA"};
     int numbOftabs = 3;
 
     @Override
@@ -24,8 +24,10 @@ public class Dinamica extends AppCompatActivity {
         setContentView(R.layout.activity_dinamica);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbarDinamica);
-        setSupportActionBar(mToolbar);
+        mToolbar.setLogo(R.drawable.delta);
         mToolbar.setTitle("Dinâmica");
+        setSupportActionBar(mToolbar);
+
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -43,6 +45,7 @@ public class Dinamica extends AppCompatActivity {
             }
         });
 
+        tabs.setDistributeEvenly(true);
         tabs.setViewPager(pager);
         pager.setCurrentItem(0);
     }

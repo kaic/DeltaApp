@@ -15,8 +15,8 @@ public class FG extends AppCompatActivity {
     ViewPager pager;
     AbasPagerAdapterFG adapter;
     SlidingTabLayout tabs;
-    CharSequence titles[]={"AULAS","DEMONSTRAÇÃO","CALCULADORA"};
-    int numbOftabs = 3;
+    CharSequence titles[]={"AULAS","CALCULADORA"};
+    int numbOftabs = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +24,10 @@ public class FG extends AppCompatActivity {
         setContentView(R.layout.activity_fg);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbarFG);
+        mToolbar.setLogo(R.drawable.delta);
+        mToolbar.setTitle("Força Gravitacional");
         setSupportActionBar(mToolbar);
-        mToolbar.setTitle("Dinâmica");
+
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -43,6 +45,7 @@ public class FG extends AppCompatActivity {
             }
         });
 
+        tabs.setDistributeEvenly(true);
         tabs.setViewPager(pager);
         pager.setCurrentItem(0);
     }

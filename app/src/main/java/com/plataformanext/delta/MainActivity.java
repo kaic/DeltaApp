@@ -8,19 +8,19 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
-import android.widget.Toast;
 
 import com.plataformanext.delta.adapters.MateriasAdapter;
+import com.plataformanext.delta.aulas.AulaGeral;
+import com.plataformanext.delta.aulas.AulaTeste;
 import com.plataformanext.delta.domain.Materias;
 import com.plataformanext.delta.interfaces.RecyclerViewOnClickListenerHack;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 
 public class MainActivity extends ActionBarActivity implements RecyclerViewOnClickListenerHack {
+    private com.github.clans.fab.FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,14 +28,16 @@ public class MainActivity extends ActionBarActivity implements RecyclerViewOnCli
         setContentView(R.layout.activity_main);
 
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar.setLogo(R.drawable.delta);
+        mToolbar.setTitle(" Delta");
         setSupportActionBar(mToolbar);
 
-
+        fab = (com.github.clans.fab.FloatingActionButton) findViewById(R.id.fabAula);
         //CARDS
         RecyclerView mCardView = (RecyclerView) findViewById(R.id.rv_card);
         mCardView.setHasFixedSize(true);
 
-        /*mCardView.setOnScrollListener(new RecyclerView.OnScrollListener() {
+        mCardView.setOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
@@ -46,13 +48,13 @@ public class MainActivity extends ActionBarActivity implements RecyclerViewOnCli
                 super.onScrolled(recyclerView, dx, dy);
 
                 if (dy > 0) {
-                    fab.hideMenuButton(true);
+                    fab.hide(true);
                 } else {
-                    fab.showMenuButton(true);
+                    fab.show(true);
                 }
 
             }
-        });*/
+        });
 
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
@@ -62,13 +64,6 @@ public class MainActivity extends ActionBarActivity implements RecyclerViewOnCli
         MateriasAdapter adapter = new MateriasAdapter(this, mList);
         adapter.setRecyclerViewOnClickListenerHack(this);
         mCardView.setAdapter(adapter);
-
-        Calendar c = Calendar.getInstance();
-        System.out.println("Current time => " + c.getTime());
-
-        SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
-        String formattedDate = df.format(c.getTime());
-        Toast.makeText(getBaseContext(), formattedDate, Toast.LENGTH_SHORT).show();
 
     }
 
@@ -103,6 +98,11 @@ public class MainActivity extends ActionBarActivity implements RecyclerViewOnCli
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return super.onCreateOptionsMenu(menu);
+    }
+
+    public void AulaMecanica(View view) {
+        Intent i = new Intent(this, AulaGeral.class);
+        startActivity(i);
     }
 
 

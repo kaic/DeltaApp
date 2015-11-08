@@ -3,12 +3,8 @@ package com.plataformanext.delta.adapters;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.plataformanext.delta.fragments.AulasDinamica;
 import com.plataformanext.delta.fragments.AulasEstatica;
-import com.plataformanext.delta.fragments.CalculadoraDinamica;
 import com.plataformanext.delta.fragments.CalculadoraEstatica;
-import com.plataformanext.delta.fragments.DemoDinamica;
-import com.plataformanext.delta.fragments.DemoEstatica;
 
 
 public class AbasPagerAdapterEstatica extends FragmentStatePagerAdapter {
@@ -30,12 +26,6 @@ public class AbasPagerAdapterEstatica extends FragmentStatePagerAdapter {
         {
             AulasEstatica aulas = new AulasEstatica();
             return aulas;
-        }
-        if(position == 1)
-        {
-            DemoEstatica demo = new DemoEstatica();
-            return demo;
-
         } else {
             CalculadoraEstatica cal = new CalculadoraEstatica();
             return cal;

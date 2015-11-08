@@ -4,12 +4,8 @@ package com.plataformanext.delta.adapters;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.plataformanext.delta.fragments.AulasCinematica;
 import com.plataformanext.delta.fragments.AulasHidrostatica;
-import com.plataformanext.delta.fragments.CalculadoraCinematica;
 import com.plataformanext.delta.fragments.CalculadoraHidrostatica;
-import com.plataformanext.delta.fragments.DemoCinematica;
-import com.plataformanext.delta.fragments.DemoHidrostatica;
 
 public class AbasPagerAdapterHidrostatica extends FragmentStatePagerAdapter {
 
@@ -31,12 +27,6 @@ public class AbasPagerAdapterHidrostatica extends FragmentStatePagerAdapter {
         {
             AulasHidrostatica aulas = new AulasHidrostatica();
             return aulas;
-        }
-        if(position == 1)
-        {
-            DemoHidrostatica demo = new DemoHidrostatica();
-            return demo;
-
         } else {
             CalculadoraHidrostatica cal = new CalculadoraHidrostatica();
             return cal;

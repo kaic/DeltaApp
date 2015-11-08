@@ -1,54 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingTop="20dp">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    app:cardElevation="2dp"
+    app:cardMaxElevation="2dp"
+    app:cardUseCompatPadding="false"
+    app:cardPreventCornerOverlap="true"
+    app:cardCornerRadius="2dp">
 
-    <TextView
-        android:textColor="@color/PrimaryText"
-        android:id="@+id/tv_nome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:paddingRight="16dp"
-        android:textSize="16sp"
-        android:layout_marginLeft="20dp" />
-
-    <TextView
-        android:textColor="@color/ColorPrimary"
-        android:layout_below="@+id/tv_nome"
-        android:layout_alignLeft="@+id/tv_nome"
-        android:id="@+id/tv_conteudo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingRight="16dp"
-        android:textSize="12sp" />
-
-
-    <TextView
-        android:textColor="@color/ColorPrimaryDark"
-        android:id="@+id/tv_axis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:paddingLeft="16dp"
-        android:layout_below="@+id/tv_nome"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="20dp"
-        android:layout_marginEnd="20dp" />
-
-    <View
-        android:id="@+id/vw_divider"
-        android:background="@color/ColorPrimary"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="0.8dp"
-        android:elevation="1dp"
-        android:layout_below="@+id/tv_axis"
-        android:layout_centerHorizontal="true"
-        android:paddingLeft="16dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp" />
+        android:layout_height="match_parent">
 
-</RelativeLayout>
+        <TextView
+            android:textColor="@color/PrimaryText"
+            android:id="@+id/tv_nomeDemo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="20dp"
+            android:textSize="24sp" />
+
+        <TextView
+            android:textColor="@color/PrimaryText"
+            android:layout_below="@+id/tv_nomeDemo"
+            android:id="@+id/tv_materiaDemo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingBottom="20dp"
+            android:textSize="14sp" />
+
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

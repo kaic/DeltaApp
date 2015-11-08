@@ -1,7 +1,8 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="1">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbarConversao"
@@ -13,82 +14,70 @@
         android:elevation="4dp"
         />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/edtDistancia"
-        android:layout_marginTop="20dp"
-        android:paddingRight="10dp"
-        android:width="100dp"
-        android:inputType="number|numberDecimal"
-        android:layout_below="@+id/toolbarConversao"
-        android:layout_centerHorizontal="true"
-        android:singleLine="false" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/edtTempo"
-        android:layout_marginTop="20dp"
-        android:paddingRight="10dp"
-        android:width="100dp"
-        android:inputType="number|numberDecimal"
-        android:layout_below="@+id/txtM" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="KM/H"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="KM/H para M/S"
         android:id="@+id/textView"
-        android:layout_alignTop="@+id/edtDistancia"
-        android:layout_alignRight="@+id/edtDistancia" />
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="M/S"
-        android:id="@+id/textView2"
-        android:layout_alignRight="@+id/edtTempo"
-        android:layout_alignEnd="@+id/textView"
-        android:layout_alignTop="@+id/edtTempo" />
-
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Calcular"
-        android:id="@+id/btnKm"
-        android:onClick="conversaoKm"
-        android:layout_below="@+id/edtDistancia"
-        android:layout_centerHorizontal="true" />
-
-    <Button
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/message_wrapper"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Calcular"
-        android:id="@+id/btnM"
-        android:onClick="conversaoM"
-        android:layout_below="@+id/edtTempo" />
+        android:paddingTop="20dp">
+        <EditText
+            android:id="@+id/conversaoKm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="KM/H"
+            android:numeric="decimal"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Converter"
+        android:id="@+id/button"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/Text"
+        android:onClick="conversao"
+        android:layout_weight="0.1" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Resultado em M/S"
-        android:id="@+id/txtM"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="M/S para KM/H"
+        android:id="@+id/textView2"
         android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/btnKm" />
+        android:layout_gravity="center_horizontal" />
 
-    <TextView
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/message_wrapper2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp">
+        <EditText
+            android:id="@+id/conversaoM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="M/S"
+            android:numeric="decimal"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Resultado em KM/H"
-        android:id="@+id/txtKm"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:layout_below="@+id/btnM" />
+        android:text="Converter"
+        android:id="@+id/converterC"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/Text"
+        android:onClick="conversao"
+        android:layout_weight="0.1" />
 
-</RelativeLayout>
+</LinearLayout>

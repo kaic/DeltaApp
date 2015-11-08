@@ -13,16 +13,15 @@ import com.plataformanext.delta.interfaces.RecyclerViewOnClickListenerHack;
 
 import java.util.List;
 
-
 public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.MyViewHolder> {
     private List<Demo> mList;
     private LayoutInflater mLayoutInflater;
     private RecyclerViewOnClickListenerHack mRecyclerViewOnClickListenerHack;
 
-
     public DemoAdapter(Context c, List<Demo> l){
         mList = l;
         mLayoutInflater = (LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
     }
 
 
@@ -35,9 +34,9 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(MyViewHolder myViewHolder, int position) {
+        myViewHolder.tvMateria.setText(mList.get(position).getMateria());
         myViewHolder.tvNome.setText(mList.get(position).getNome());
-        myViewHolder.tvAxis.setText(mList.get(position).getAxis());
-        myViewHolder.tvConteudo.setText(mList.get(position).getConteudo());
+
     }
 
     @Override
@@ -51,16 +50,14 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.MyViewHolder> 
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+        public TextView tvMateria;
         public TextView tvNome;
-        public TextView tvAxis;
-        public TextView tvConteudo;
 
         public MyViewHolder(View itemView) {
             super(itemView);
 
-            tvNome = (TextView) itemView.findViewById(R.id.tv_nome);
-            tvAxis = (TextView) itemView.findViewById(R.id.tv_axis);
-            tvConteudo = (TextView) itemView.findViewById(R.id.tv_conteudo);
+            tvMateria = (TextView) itemView.findViewById(R.id.tv_materiaDemo);
+            tvNome = (TextView) itemView.findViewById(R.id.tv_nomeDemo);
 
             itemView.setOnClickListener(this);
         }

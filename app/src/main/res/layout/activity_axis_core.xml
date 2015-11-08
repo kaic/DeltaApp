@@ -24,24 +24,6 @@
         android:textSize="15sp" />
 
     <TextView
-        android:id="@+id/sensorView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/sensorView0"
-        android:layout_centerHorizontal="true"
-        android:text="Sensor 1 Voltage = ????"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/sensorView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/sensorView1"
-        android:layout_centerHorizontal="true"
-        android:text="Sensor 2 Voltage = ????"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
         android:id="@+id/sensorView0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

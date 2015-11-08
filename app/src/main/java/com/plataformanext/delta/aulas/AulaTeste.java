@@ -27,15 +27,12 @@ public class AulaTeste extends AppCompatActivity {
         sliderShow.setDuration(4000);
 
         DefaultSliderView slide1 = new DefaultSliderView(this);
-        slide1.image(R.drawable.teste1);
+        slide1.image(R.drawable.mecanica_01);
         DefaultSliderView slide2 = new DefaultSliderView(this);
-        slide2.image(R.drawable.teste2);
-        DefaultSliderView slide3 = new DefaultSliderView(this);
-        slide3.image(R.drawable.teste3);
+        slide2.image(R.drawable.mecanica_02);
 
         sliderShow.addSlider(slide1);
         sliderShow.addSlider(slide2);
-        sliderShow.addSlider(slide3);
     }
 
     @Override

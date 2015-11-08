@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.plataformanext.delta.R;
 import com.plataformanext.delta.domain.Aulas;
-import com.plataformanext.delta.domain.Demo;
 import com.plataformanext.delta.interfaces.RecyclerViewOnClickListenerHack;
 
 import java.util.List;

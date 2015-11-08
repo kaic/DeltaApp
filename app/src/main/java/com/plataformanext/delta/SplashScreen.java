@@ -15,7 +15,7 @@ public class SplashScreen extends AppCompatActivity {
         Thread logoTimer = new Thread() {
             public void run() {
                 try {
-                    sleep(2000);
+                    sleep(3000);
                 } catch (InterruptedException e) {
                     Log.d("Exception", "Exception" + e);
                 } finally {

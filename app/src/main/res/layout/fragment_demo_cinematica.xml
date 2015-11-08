@@ -1,45 +1,27 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.plataformanext.delta.fragments.DemoCinematica">
+    android:orientation="vertical">
 
-    <com.github.clans.fab.FloatingActionMenu xmlns:fab="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/fab"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_cardDemo"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical" />
+
+    <com.github.clans.fab.FloatingActionButton xmlns:fab="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fabCinematica"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:paddingLeft="10dp"
-        fab:menu_icon="@drawable/ic_bluetooth"
-        fab:menu_colorNormal="@color/ColorPrimary"
-        fab:menu_colorPressed="@color/ColorPrimaryDark"
-        fab:menu_labels_ellipsize="end"
-        fab:menu_labels_singleLine="true">
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/ic_bluetooth"
+        fab:fab_colorNormal="@color/ColorPrimary"
+        fab:fab_colorPressed="@color/ColorPrimaryDark"
+        fab:fab_label="Axis"
+        android:onClick="Axis"/>
 
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/fabCon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_bluetooth_con"
-            fab:fab_size="mini"
-            fab:fab_label="Conectar Axis"
-            fab:fab_colorNormal="@color/ColorPrimary"
-            fab:fab_colorPressed="@color/ColorPrimaryDark"
-            android:nestedScrollingEnabled="false"
-            android:onClick="Axis" />
-
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/fabDesc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_bluetooth_desc"
-            fab:fab_size="mini"
-            fab:fab_label="Desconectar Axis"
-            fab:fab_colorNormal="@color/ColorPrimary"
-            fab:fab_colorPressed="@color/ColorPrimaryDark"
-            android:nestedScrollingEnabled="false"
-            android:onClick="desconectarAxis" />
-    </com.github.clans.fab.FloatingActionMenu>
-
-</FrameLayout>
+    </FrameLayout>

@@ -4,12 +4,8 @@ package com.plataformanext.delta.adapters;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.plataformanext.delta.fragments.AulasCinematica;
 import com.plataformanext.delta.fragments.AulasFG;
-import com.plataformanext.delta.fragments.CalculadoraCinematica;
 import com.plataformanext.delta.fragments.CalculadoraFG;
-import com.plataformanext.delta.fragments.DemoCinematica;
-import com.plataformanext.delta.fragments.DemoFG;
 
 public class AbasPagerAdapterFG extends FragmentStatePagerAdapter {
 
@@ -31,12 +27,6 @@ public class AbasPagerAdapterFG extends FragmentStatePagerAdapter {
         {
             AulasFG aulas = new AulasFG();
             return aulas;
-        }
-        if(position == 1)
-        {
-            DemoFG demo = new DemoFG();
-            return demo;
-
         } else {
             CalculadoraFG cal = new CalculadoraFG();
             return cal;

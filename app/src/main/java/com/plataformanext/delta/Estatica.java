@@ -14,8 +14,8 @@ public class Estatica extends AppCompatActivity {
     ViewPager pager;
     AbasPagerAdapterEstatica adapter;
     SlidingTabLayout tabs;
-    CharSequence titles[]={"AULAS","DEMONSTRAÇÃO","CALCULADORA"};
-    int numbOftabs = 3;
+    CharSequence titles[]={"AULAS","CALCULADORA"};
+    int numbOftabs = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +23,9 @@ public class Estatica extends AppCompatActivity {
         setContentView(R.layout.activity_estatica);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbarEstatica);
-        setSupportActionBar(mToolbar);
         mToolbar.setTitle("Estatica");
+        mToolbar.setLogo(R.drawable.delta);
+        setSupportActionBar(mToolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -42,6 +43,7 @@ public class Estatica extends AppCompatActivity {
             }
         });
 
+        tabs.setDistributeEvenly(true);
         tabs.setViewPager(pager);
         pager.setCurrentItem(0);
     }

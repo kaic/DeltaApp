@@ -27,5 +27,19 @@
 
     <string name="none_paired">Nenhum dispositivo foi pareado</string>
     <string name="title_activity_axis_core">AxisCore</string>
+    <string name="title_activity_lgun">"Lei da Gravitação Universal de Newton "</string>
+    <string name="title_activity_aula_geral">AulaGeral</string>
+    <string name="title_activity_aula_velocidade">AulaVelocidade</string>
+    <string name="title_activity_aula_vetores">AulaVetores</string>
+    <string name="title_activity_activity_demo_cinematica">ActivityDemoCinematica</string>
+    <string name="title_activity_acmedia_demo">Aceleração Média</string>
+    <string name="title_activity_deslocamento_demo">Deslocamento</string>
+    <string name="title_activity_ehe_demo">Equação Horaria do Espaço</string>
+    <string name="title_activity_fhe_demo">Função Horaria do Espaço</string>
+    <string name="title_activity_fhv_demo">Função Horaria da Velocidade</string>
+    <string name="title_activity_torriceli_demo">Equação de Torriceli</string>
+    <string name="title_activity_conversao_demo">Conversão de Velocidade</string>
+    <string name="title_activity_velocidade_demo">Velocidade Média</string>
+
 
 </resources>

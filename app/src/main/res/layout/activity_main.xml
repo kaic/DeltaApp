@@ -24,6 +24,19 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical" />
 
+        <com.github.clans.fab.FloatingActionButton xmlns:fab="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/fabAula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_local"
+            fab:fab_colorNormal="@color/ColorPrimary"
+            fab:fab_colorPressed="@color/ColorPrimaryDark"
+            fab:fab_label="Aula Mecânica"
+            android:onClick="AulaMecanica" />
+
     </FrameLayout>
 
 </LinearLayout>

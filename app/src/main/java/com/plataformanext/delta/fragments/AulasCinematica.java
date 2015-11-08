@@ -12,6 +12,8 @@ import com.plataformanext.delta.R;
 import com.plataformanext.delta.adapters.AulasAdapter;
 
 import com.plataformanext.delta.aulas.AulaTeste;
+import com.plataformanext.delta.aulas.AulaVelocidade;
+import com.plataformanext.delta.aulas.AulaVetores;
 import com.plataformanext.delta.domain.Aulas;
 import com.plataformanext.delta.interfaces.RecyclerViewOnClickListenerHack;
 
@@ -51,7 +53,7 @@ public class AulasCinematica extends android.support.v4.app.Fragment implements 
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(llm);
 
-        mList = getSetAulasList(1);
+        mList = getSetAulasList(2);
         AulasAdapter adapter = new AulasAdapter(getActivity(), mList);
         adapter.setRecyclerViewOnClickListenerHack(this);
         mRecyclerView.setAdapter(adapter);
@@ -62,17 +64,22 @@ public class AulasCinematica extends android.support.v4.app.Fragment implements 
 
     @Override
     public void onClickListener(View view, int position) {
+        Intent i;
         switch (position){
             case 0:
-                Intent i = new Intent(getActivity(), AulaTeste.class);
+                i = new Intent(getActivity(), AulaVelocidade.class);
+                startActivity(i);
+                break;
+            case 1:
+                i = new Intent(getActivity(), AulaVetores.class);
                 startActivity(i);
                 break;
         }
     }
 
     public List<Aulas> getSetAulasList(int qtd) {
-        String[] nome = new String[]{"Aula Teste"};
-        String[] materia = new String[]{"Teste"};
+        String[] nome = new String[]{"Velocidade", "Vetores"};
+        String[] materia = new String[]{"Velocidade normal, escalar, vetorial, angular e relativa", "Vetores e Operações"};
         List<Aulas> listAux = new ArrayList<>();
 
         for (int i = 0; i < qtd; i++) {

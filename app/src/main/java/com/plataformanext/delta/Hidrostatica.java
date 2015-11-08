@@ -15,8 +15,8 @@ public class Hidrostatica extends AppCompatActivity {
     ViewPager pager;
     AbasPagerAdapterHidrostatica adapter;
     SlidingTabLayout tabs;
-    CharSequence titles[]={"AULAS","DEMONSTRAÇÃO","CALCULADORA"};
-    int numbOftabs = 3;
+    CharSequence titles[]={"AULAS","CALCULADORA"};
+    int numbOftabs = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +24,10 @@ public class Hidrostatica extends AppCompatActivity {
         setContentView(R.layout.activity_hidrostatica);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbarHidrostatica);
-        setSupportActionBar(mToolbar);
+        mToolbar.setLogo(R.drawable.delta);
         mToolbar.setTitle("Hidrostatica");
+        setSupportActionBar(mToolbar);
+
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -43,6 +45,7 @@ public class Hidrostatica extends AppCompatActivity {
             }
         });
 
+        tabs.setDistributeEvenly(true);
         tabs.setViewPager(pager);
         pager.setCurrentItem(0);
     }

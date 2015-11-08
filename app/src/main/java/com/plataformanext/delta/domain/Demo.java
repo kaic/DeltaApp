@@ -1,30 +1,26 @@
 package com.plataformanext.delta.domain;
 
-public class Demo {
+/**
+ * Created by kaic on 05/11/15.
+ */
+public class Demo  {
     private String nome;
-    private String axis;
-    private String conteudo;
+    private String materia;
 
-    public Demo(){}
-
-    public Demo(String n, String c, String a) {
-        nome = n;
-        conteudo = c;
-        axis = a;
-
-    }
+        public Demo(){}
+        public Demo(String n, String m){
+            nome = n;
+            materia = m;
+        }
 
 
-    public String getNome() {
-        return nome;
-    }
+        public String getNome() {
+            return nome;
+        }
 
-    public String getAxis() {
-        return axis;
-    }
+        public String getMateria() {
+            return materia;
+        }
 
-    public String getConteudo() {
-        return conteudo;
-    }
 
 }

@@ -1,12 +1,16 @@
 package com.plataformanext.delta;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.View;
 
 import com.plataformanext.delta.adapters.AbasPagerAdapterCinematica;
+import com.plataformanext.delta.axis.DeviceListActivity;
 import com.plataformanext.delta.extras.SlidingTabLayout;
 
 public class Cinematica extends AppCompatActivity {
@@ -14,7 +18,7 @@ public class Cinematica extends AppCompatActivity {
     ViewPager pager;
     AbasPagerAdapterCinematica adapter;
     SlidingTabLayout tabs;
-    CharSequence titles[]={"AULAS","DEMONSTRAÇÃO","CALCULADORA"};
+    CharSequence titles[]={"AULAS","DEMO","CALCULADORA"};
     int numbOftabs = 3;
 
     @Override
@@ -23,8 +27,10 @@ public class Cinematica extends AppCompatActivity {
         setContentView(R.layout.activity_cinematica);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbarCinematica);
-        setSupportActionBar(mToolbar);
+        mToolbar.setLogo(R.drawable.delta);
         mToolbar.setTitle("Cinemática");
+        setSupportActionBar(mToolbar);
+
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -42,6 +48,7 @@ public class Cinematica extends AppCompatActivity {
             }
         });
 
+        tabs.setDistributeEvenly(true);
         tabs.setViewPager(pager);
         pager.setCurrentItem(0);
     }
@@ -50,6 +57,11 @@ public class Cinematica extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_cinematica, menu);
         return true;
+    }
+
+    public void Axis(View view) {
+        Intent i = new Intent(this, DeviceListActivity.class);
+        startActivity(i);
     }
 
 }

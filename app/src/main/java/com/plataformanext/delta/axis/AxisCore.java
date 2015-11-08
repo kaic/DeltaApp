@@ -19,8 +19,9 @@ import java.util.UUID;
 
 public class AxisCore extends AppCompatActivity {
 
-    TextView txtString, txtStringLength, sensorView0, sensorView1, sensorView2, sensorView3;
+    TextView txtString, txtStringLength, aceleracao;
     Handler bluetoothIn;
+
 
     final int handlerState = 0;                        //used to identify handler message
     private BluetoothAdapter btAdapter = null;
@@ -42,37 +43,29 @@ public class AxisCore extends AppCompatActivity {
 
         txtString = (TextView) findViewById(R.id.txtString);
         txtStringLength = (TextView) findViewById(R.id.testView1);
-        sensorView0 = (TextView) findViewById(R.id.sensorView0);
-        sensorView1 = (TextView) findViewById(R.id.sensorView1);
-        sensorView2 = (TextView) findViewById(R.id.sensorView2);
+        aceleracao = (TextView) findViewById(R.id.sensorView0);
 
         bluetoothIn = new Handler() {
             public void handleMessage(android.os.Message msg) {
-                if (msg.what == handlerState) {
-                    String readMessage = (String) msg.obj;
-                    recDataString.append(readMessage);
-                    int endOfLineIndex = recDataString.indexOf("~");
-                    if (endOfLineIndex > 0) {
-                        String dataInPrint = recDataString.substring(0, endOfLineIndex);
+                if (msg.what == handlerState) {                                     //if message is what we want
+                    String readMessage = (String) msg.obj;                                                                // msg.arg1 = bytes from connect thread
+                    recDataString.append(readMessage);                                      //keep appending to string until ~
+                    int endOfLineIndex = recDataString.indexOf("~");                    // determine the end-of-line
+                    String dataInPrint;
+                    if (endOfLineIndex > 0) {                                           // make sure there data before ~
+                        dataInPrint = recDataString.substring(0, endOfLineIndex);
                         txtString.setText("Data Received = " + dataInPrint);
-
-                        int dataLength = dataInPrint.length();
+                        int dataLength = dataInPrint.length();                          //get length of data received
                         txtStringLength.setText("String Length = " + String.valueOf(dataLength));
+                        String value = dataInPrint.substring (0, dataInPrint.length() - 1);
+                        value = value.replace(",", ".");
+                        //Double ace = Double.parseDouble(value);
+                        aceleracao.setText("Aceleração: "+value);
 
-                        if (recDataString.charAt(0) == '#') {
-                            String sensor0 = recDataString.substring(1, 6);
-                            String sensor1 = recDataString.substring(7, 12);
-                            String sensor2 = recDataString.substring(13, 19);
-
-                            sensorView0.setText("X = " + sensor0);
-                            sensorView1.setText("Y = " + sensor1);
-                            sensorView2.setText("Z = " + sensor2);
-                        }
-
-                        recDataString.delete(0, recDataString.length());
                     }
+                    recDataString.delete(0, recDataString.length());                    //clear all string data
                 }
-            }
+                }
         };
 
         btAdapter = BluetoothAdapter.getDefaultAdapter();       // get Bluetooth adapter
