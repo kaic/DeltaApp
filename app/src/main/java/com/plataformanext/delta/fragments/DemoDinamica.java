@@ -58,7 +58,7 @@ public class DemoDinamica extends android.support.v4.app.Fragment implements Rec
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         mCardDemo.setLayoutManager(llm);
 
-        mListDemo = getSetDemoList(15);
+        mListDemo = getSetDemoList(11);
         DemoAdapter adapter = new DemoAdapter(getActivity(), mListDemo);
         adapter.setRecyclerViewOnClickListenerHack(this);
         mCardDemo.setAdapter(adapter);
@@ -78,19 +78,14 @@ public class DemoDinamica extends android.support.v4.app.Fragment implements Rec
                 i = new Intent(getActivity(), VelocidadeMedia.class);
                 startActivity(i);
                 break;
-
         }
     }
 
     public List<Demo> getSetDemoList(int qtd) {
         String[] nome = new String[]{
                 "2ª Lei de Newton",
-                "Força peso",
-                "Força resultante",
                 "Plano inclinado",
-                "Trabalho resultante",
                 "Força paralela ao deslocamento",
-                "Trabalho da força Peso",
                 "Potência média",
                 "Potência Instantânea",
                 "Energia Cinética",
@@ -102,11 +97,7 @@ public class DemoDinamica extends android.support.v4.app.Fragment implements Rec
         };
         String[] materia = new String[]{
                 "Força",
-                "Força",
-                "Força",
                 "",
-                "Trabalho",
-                "Trabalho",
                 "Trabalho",
                 "Potência",
                 "Potência",
