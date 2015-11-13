@@ -35,7 +35,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_below="@+id/txtMS"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:visibility="invisible" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -58,7 +59,8 @@
         android:layout_alignTop="@+id/txtKM"
         android:layout_toRightOf="@+id/txtKM"
         android:layout_toEndOf="@+id/txtKM"
-        android:layout_marginLeft="25dp" />
+        android:layout_marginLeft="25dp"
+        android:visibility="invisible" />
 
     <TextView
         android:layout_width="wrap_content"

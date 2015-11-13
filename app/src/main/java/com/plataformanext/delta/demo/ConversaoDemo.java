@@ -4,32 +4,20 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.components.YAxis;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.data.LineData;
-import com.github.mikephil.charting.data.LineDataSet;
-import com.github.mikephil.charting.utils.ColorTemplate;
 import com.plataformanext.delta.R;
 import com.plataformanext.delta.axis.DeviceListActivity;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.Timer;
-import java.util.TimerTask;
 import java.util.UUID;
 
 public class ConversaoDemo extends AppCompatActivity {
@@ -41,8 +29,9 @@ public class ConversaoDemo extends AppCompatActivity {
     private ConnectedThread mConnectedThread;
     private static final UUID BTMODULEUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
     private static String address;
-    public String value;
     private TextView txtKM, txtMS;
+    private String dataInPrint;
+    private int value;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +43,8 @@ public class ConversaoDemo extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        LineChart chart = (LineChart) findViewById(R.id.chart);
+
         txtKM = (TextView) findViewById(R.id.txtKM);
         txtMS = (TextView) findViewById(R.id.txtMS);
 
@@ -63,14 +54,17 @@ public class ConversaoDemo extends AppCompatActivity {
                     String readMessage = (String) msg.obj;
                     recDataString.append(readMessage);
                     int endOfLineIndex = recDataString.indexOf("~");
-                    String dataInPrint;
                     if (endOfLineIndex > 0) {
                         dataInPrint = recDataString.substring(0, endOfLineIndex);
-                        value = dataInPrint.substring (0, dataInPrint.length() - 1);
-                        value = value.replace(",", ".");
+                        if (dataInPrint == "0"){
+                            value = Integer.parseInt(dataInPrint);
+                            float km = (float) (value / 3.6);
+                            txtKM.setText(String.valueOf(km));
+                        }
 
-                        txtKM.setText(value);
-                        txtMS.setText(value);
+                        txtMS.setText(dataInPrint);
+
+
                     }
                     recDataString.delete(0, recDataString.length());
                 }
@@ -199,4 +193,6 @@ public class ConversaoDemo extends AppCompatActivity {
             }
         }
     }
+
+
 }

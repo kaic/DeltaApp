@@ -44,7 +44,7 @@
         android:id="@+id/button"
         android:layout_gravity="center_horizontal"
         android:textColor="@color/Text"
-        android:onClick="conversao"
+        android:onClick="calculo"
         android:layout_weight="0.1" />
 
     <TextView

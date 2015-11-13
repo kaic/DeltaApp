@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import com.plataformanext.delta.R;
 import com.plataformanext.delta.adapters.CalculadoraAdapter;
 import com.plataformanext.delta.calculos.Conversao;
-import com.plataformanext.delta.calculos.VelocidadeMedia;
 import com.plataformanext.delta.domain.Calculadora;
 import com.plataformanext.delta.interfaces.RecyclerViewOnClickListenerHack;
 
@@ -58,13 +57,18 @@ public class CalculadoraCinematica extends android.support.v4.app.Fragment  impl
     @Override
     public void onClickListener(View view, int position) {
         Intent i;
+        int parametro;
         switch (position){
             case 0:
                 i = new Intent(getActivity(), Conversao.class);
+                parametro = 1;
+                i.putExtra("parametro", parametro);
                 startActivity(i);
                 break;
             case 1:
-                i = new Intent(getActivity(), VelocidadeMedia.class);
+                i = new Intent(getActivity(), Conversao.class);
+                parametro = 2;
+                i.putExtra("parametro", parametro);
                 startActivity(i);
                 break;
 

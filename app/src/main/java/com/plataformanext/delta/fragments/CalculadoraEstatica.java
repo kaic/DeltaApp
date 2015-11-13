@@ -3,7 +3,6 @@ package com.plataformanext.delta.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -48,7 +47,7 @@ public class CalculadoraEstatica extends android.support.v4.app.Fragment impleme
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(llm);
 
-        mList = getSetCalcList(3);
+        mList = getSetCalcList(11);
         CalculadoraAdapter adapter = new CalculadoraAdapter(getActivity(), mList);
         adapter.setRecyclerViewOnClickListenerHack(this);
         mRecyclerView.setAdapter(adapter);
@@ -73,8 +72,8 @@ public class CalculadoraEstatica extends android.support.v4.app.Fragment impleme
     }
 
     public List<Calculadora> getSetCalcList(int qtd) {
-        String[] nome = new String[]{"Centro de massa (CM)","Momento de uma força (M)", "Módulo do Momento da Força"};
-        String[] conteudo = new String[]{"Estática","Estática","Estática"};
+        String[] nome = new String[]{"Centro de massa (CM)","Momento de uma força (M)", "Módulo do Momento da Força","Pressão","Densidade","Pressão Hidrostática","Teorema de Stevin","Teorema de Pasca","Prensa Hidráulica","Princípio de Arquimedes","Peso Aparente"};
+        String[] conteudo = new String[]{"Estática","Estática","Estática","Hidrostática","Hidrostática","Hidrostática","Hidrostática","Hidrostática","Hidrostática","Empuxo","Empuxo"};
         List<Calculadora> listAux = new ArrayList<>();
 
         for (int i = 0; i < qtd; i++) {

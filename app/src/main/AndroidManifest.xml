@@ -87,14 +87,6 @@
                 android:value="com.plataformanext.delta.MainActivity" />
         </activity>
         <activity
-            android:name=".Hidrostatica"
-            android:label="@string/title_activity_hidrostatica"
-            android:parentActivityName=".MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.plataformanext.delta.MainActivity" />
-        </activity>
-        <activity
             android:name=".FG"
             android:label="@string/title_activity_fg"
             android:parentActivityName=".MainActivity" >

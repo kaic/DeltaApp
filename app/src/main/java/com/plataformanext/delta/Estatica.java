@@ -23,7 +23,7 @@ public class Estatica extends AppCompatActivity {
         setContentView(R.layout.activity_estatica);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbarEstatica);
-        mToolbar.setTitle("Estatica");
+        mToolbar.setTitle("Estática e Hidrostática");
         mToolbar.setLogo(R.drawable.delta);
         setSupportActionBar(mToolbar);
 

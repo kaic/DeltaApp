@@ -72,7 +72,7 @@ public class DemoCinematica extends android.support.v4.app.Fragment implements R
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         mCardDemo.setLayoutManager(llm);
 
-        mListDemo = getSetDemoList(8);
+        mListDemo = getSetDemoList(7);
         DemoAdapter adapter = new DemoAdapter(getActivity(), mListDemo);
         adapter.setRecyclerViewOnClickListenerHack(this);
         mCardDemo.setAdapter(adapter);
@@ -165,8 +165,7 @@ public class DemoCinematica extends android.support.v4.app.Fragment implements R
 
   public List<Demo> getSetDemoList(int qtd) {
         String[] nome = new String[]{
-                "Conversão de Velocidade",
-                "Velocidade Média",
+                "Velocidade",
                 "Equação horária do espaço",
                 "Deslocamento",
                 "Aceleração Média",
@@ -175,7 +174,6 @@ public class DemoCinematica extends android.support.v4.app.Fragment implements R
                 "Equação de Torricelli",
         };
         String[] materia = new String[]{
-                "Velocidade",
                 "Velocidade",
                 "MRU",
                 "MRU",

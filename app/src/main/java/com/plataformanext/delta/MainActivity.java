@@ -11,7 +11,6 @@ import android.view.View;
 
 import com.plataformanext.delta.adapters.MateriasAdapter;
 import com.plataformanext.delta.aulas.AulaGeral;
-import com.plataformanext.delta.aulas.AulaTeste;
 import com.plataformanext.delta.domain.Materias;
 import com.plataformanext.delta.interfaces.RecyclerViewOnClickListenerHack;
 
@@ -60,7 +59,7 @@ public class MainActivity extends ActionBarActivity implements RecyclerViewOnCli
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         mCardView.setLayoutManager(llm);
 
-        List<Materias> mList = (this).getSetMateriasList(5);
+        List<Materias> mList = (this).getSetMateriasList(4);
         MateriasAdapter adapter = new MateriasAdapter(this, mList);
         adapter.setRecyclerViewOnClickListenerHack(this);
         mCardView.setAdapter(adapter);
@@ -84,10 +83,6 @@ public class MainActivity extends ActionBarActivity implements RecyclerViewOnCli
                 startActivity(i);
                 break;
             case 3:
-                i = new Intent(this, Hidrostatica.class);
-                startActivity(i);
-                break;
-            case 4:
                 i = new Intent(this, FG.class);
                 startActivity(i);
                 break;
@@ -107,9 +102,9 @@ public class MainActivity extends ActionBarActivity implements RecyclerViewOnCli
 
 
     public List<Materias> getSetMateriasList(int qtd) {
-        String[] materia = new String[]{"Cinemática", "Dinâmica", "Estatica", "Hidrostatica", "Força Gravitacional"};
-        String[] subtitulo = new String[]{"Movimento", "Causa dos movimentos", "Equilibrio dos corpos", "Equilibrio dos corpos imersos na agua", "Comportamento dos corpos sob ação gravitacional"};
-        int[] photos = new int[]{R.drawable.gallardo, R.drawable.vyron, R.drawable.corvette, R.drawable.paganni_zonda, R.drawable.porsche_911};
+        String[] materia = new String[]{"Cinemática", "Dinâmica", "Estática e Hidrostática", "Força Gravitacional"};
+        String[] subtitulo = new String[]{"Movimento", "Causa dos movimentos", "Equilibrio dos corpos", "Comportamento dos corpos sob ação gravitacional"};
+        int[] photos = new int[]{R.drawable.gallardo, R.drawable.vyron, R.drawable.corvette, R.drawable.porsche_911};
         List<Materias> listAux = new ArrayList<>();
 
         for (int i = 0; i < qtd; i++) {

@@ -3,7 +3,6 @@ package com.plataformanext.delta.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -48,7 +47,7 @@ public class CalculadoraDinamica extends android.support.v4.app.Fragment impleme
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(llm);
 
-        mList = getSetCalcList(28);
+        mList = getSetCalcList(16);
         CalculadoraAdapter adapter = new CalculadoraAdapter(getActivity(), mList);
         adapter.setRecyclerViewOnClickListenerHack(this);
         mRecyclerView.setAdapter(adapter);
@@ -77,16 +76,8 @@ public class CalculadoraDinamica extends android.support.v4.app.Fragment impleme
                 "2ª Lei de Newton",
                 "Força Peso",
                 "Força de Atrito",
-                "Lei de Hooke",
                 "Força Centrípeta",
                 "Plano inclinado",
-                "Aceleração",
-                "Aceleração",
-                "Tração",
-                "Aceleração",
-                "Tração",
-                "Corpo preso a uma mola",
-                "Trabalho resultante",
                 "Força paralela ao deslocamento",
                 "Força não paralela ao deslocamento",
                 "Trabalho de uma força variável",
@@ -97,26 +88,14 @@ public class CalculadoraDinamica extends android.support.v4.app.Fragment impleme
                 "Teorema da Energia Cinética",
                 "Energia Potencial Gravitacional",
                 "Energia Potencial Elástica",
-                "Energia potencial gravitacional transformada em energia cinética",
-                "Energia potencial elástica transformada em energia cinética",
                 "Impulso",
-                "Teorema do Impulso",
-                "Conservação da Quantidade de Movimento"
         };
         String[] conteudo = new String[]{
                 "Força",
                 "Força",
                 "Força",
-                "Força Elástica",
                 "Dinâmica",
                 "Dinâmica",
-                "Corpos em contato",
-                "Corpos Ligado por um fio",
-                "Corpos Ligado por um fio",
-                "Corpos ligados por um fio ideal através de polia ideal",
-                "Corpos ligados por um fio ideal através de polia ideal",
-                "Dinâmica",
-                "Trabalho",
                 "Trabalho",
                 "Trabalho",
                 "Trabalho",
@@ -127,10 +106,7 @@ public class CalculadoraDinamica extends android.support.v4.app.Fragment impleme
                 "Energia",
                 "Energia Potencial",
                 "Energia Potencial",
-                "Energia Mecânica",
-                "Energia Mecânica",
-                "Impulso","Impulso",
-                "Quantidade de Movimento"
+                "Impulso",
         };
         List<Calculadora> listAux = new ArrayList<>();
 
