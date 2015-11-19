@@ -11,7 +11,6 @@ import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.github.mikephil.charting.charts.LineChart;
 import com.plataformanext.delta.R;
 import com.plataformanext.delta.axis.DeviceListActivity;
 
@@ -31,7 +30,6 @@ public class ConversaoDemo extends AppCompatActivity {
     private static String address;
     private TextView txtKM, txtMS;
     private String dataInPrint;
-    private int value;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +41,6 @@ public class ConversaoDemo extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        LineChart chart = (LineChart) findViewById(R.id.chart);
-
         txtKM = (TextView) findViewById(R.id.txtKM);
         txtMS = (TextView) findViewById(R.id.txtMS);
 
@@ -54,24 +50,23 @@ public class ConversaoDemo extends AppCompatActivity {
                     String readMessage = (String) msg.obj;
                     recDataString.append(readMessage);
                     int endOfLineIndex = recDataString.indexOf("~");
+
                     if (endOfLineIndex > 0) {
                         dataInPrint = recDataString.substring(0, endOfLineIndex);
-                        if (dataInPrint == "0"){
-                            value = Integer.parseInt(dataInPrint);
-                            float km = (float) (value / 3.6);
-                            txtKM.setText(String.valueOf(km));
-                        }
+                        int ms = dataInPrint.indexOf("m");
+                        int km = dataInPrint.indexOf("k");
+                        int d = dataInPrint.indexOf("d");
+                        String m = dataInPrint.substring(ms+1, km+1);
+                        String k = dataInPrint.substring(km+1, d+1);
 
-                        txtMS.setText(dataInPrint);
-
+                        txtKM.setText(k);
+                        txtMS.setText(m);
 
                     }
                     recDataString.delete(0, recDataString.length());
                 }
             }
         };
-
-
 
         btAdapter = BluetoothAdapter.getDefaultAdapter();
         checkBTState();

@@ -22,11 +22,8 @@ import com.plataformanext.delta.adapters.DemoAdapter;
 import com.plataformanext.delta.demo.AcMediaDemo;
 import com.plataformanext.delta.demo.ConversaoDemo;
 import com.plataformanext.delta.demo.DeslocamentoDemo;
-import com.plataformanext.delta.demo.EHEDemo;
 import com.plataformanext.delta.demo.FHEDemo;
 import com.plataformanext.delta.demo.FHVDemo;
-import com.plataformanext.delta.demo.TorriceliDemo;
-import com.plataformanext.delta.demo.VelocidadeDemo;
 import com.plataformanext.delta.domain.Demo;
 import com.plataformanext.delta.interfaces.RecyclerViewOnClickListenerHack;
 
@@ -72,7 +69,7 @@ public class DemoCinematica extends android.support.v4.app.Fragment implements R
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         mCardDemo.setLayoutManager(llm);
 
-        mListDemo = getSetDemoList(7);
+        mListDemo = getSetDemoList(5);
         DemoAdapter adapter = new DemoAdapter(getActivity(), mListDemo);
         adapter.setRecyclerViewOnClickListenerHack(this);
         mCardDemo.setAdapter(adapter);
@@ -125,37 +122,22 @@ public class DemoCinematica extends android.support.v4.app.Fragment implements R
                 startActivity(i);
                 break;
             case 1:
-                i = new Intent(getActivity(), VelocidadeDemo.class);
-                i.putExtra(EXTRA_DEVICE_ADDRESS, address);
-                startActivity(i);
-                break;
-            case 2:
-                i = new Intent(getActivity(), EHEDemo.class);
-                i.putExtra(EXTRA_DEVICE_ADDRESS, address);
-                startActivity(i);
-                break;
-            case 3:
                 i = new Intent(getActivity(), DeslocamentoDemo.class);
                 i.putExtra(EXTRA_DEVICE_ADDRESS, address);
                 startActivity(i);
                 break;
-            case 4:
+            case 2:
                 i = new Intent(getActivity(), AcMediaDemo.class);
                 i.putExtra(EXTRA_DEVICE_ADDRESS, address);
                 startActivity(i);
                 break;
-            case 5:
+            case 3:
                 i = new Intent(getActivity(), FHVDemo.class);
                 i.putExtra(EXTRA_DEVICE_ADDRESS, address);
                 startActivity(i);
                 break;
-            case 6:
+            case 4:
                 i = new Intent(getActivity(), FHEDemo.class);
-                i.putExtra(EXTRA_DEVICE_ADDRESS, address);
-                startActivity(i);
-                break;
-            case 7:
-                i = new Intent(getActivity(), TorriceliDemo.class);
                 i.putExtra(EXTRA_DEVICE_ADDRESS, address);
                 startActivity(i);
                 break;
@@ -166,18 +148,14 @@ public class DemoCinematica extends android.support.v4.app.Fragment implements R
   public List<Demo> getSetDemoList(int qtd) {
         String[] nome = new String[]{
                 "Velocidade",
-                "Equação horária do espaço",
-                "Deslocamento",
+                "Equação horária do espaço/Deslocamento",
                 "Aceleração Média",
                 "Função horária da velocidade",
                 "Função horária do espaço",
-                "Equação de Torricelli",
         };
         String[] materia = new String[]{
                 "Velocidade",
                 "MRU",
-                "MRU",
-                "MRUV",
                 "MRUV",
                 "MRUV",
                 "MRUV",
