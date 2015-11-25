@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Deslocamento:"
-        android:id="@+id/textView7"
+        android:id="@+id/txtBlibe"
         android:textSize="50dp"
         android:layout_below="@+id/toolbarDemoDeslocamento"
         android:layout_centerHorizontal="true" />
@@ -28,18 +28,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="KM/H"
+        android:text="Deslocamento"
         android:id="@+id/txtDeslocamento"
         android:layout_gravity="center_horizontal"
-        android:layout_below="@+id/textView7"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp" />
+        android:layout_below="@+id/txtBlibe"
+        android:layout_centerHorizontal="true" />
 
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/chartDeslocamento"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/txtDeslocamento"
-        android:layout_marginTop="20dp" />
+        android:layout_below="@+id/txtDeslocamento" />
 
 </RelativeLayout>

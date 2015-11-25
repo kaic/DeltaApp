@@ -60,16 +60,6 @@
                 android:value="com.plataformanext.delta.Cinematica" />
         </activity>
         <activity
-            android:name=".aulas.AulaTeste"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/title_activity_aula_teste"
-            android:parentActivityName=".Cinematica"
-            android:screenOrientation="landscape" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.plataformanext.delta.Cinematica" />
-        </activity>
-        <activity
             android:name=".SplashScreen"
             android:label="@string/app_name" >
             <intent-filter>
@@ -93,13 +83,6 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.plataformanext.delta.MainActivity" />
-        </activity>
-        <activity
-            android:name=".axis.AxisCore"
-            android:label="@string/title_activity_axis_core" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.plataformanext.delta.axis.DeviceListActivity" />
         </activity>
         <activity
             android:name=".calculos.LGUN"
@@ -135,24 +118,6 @@
             android:label="@string/title_activity_aula_vetores"
             android:parentActivityName=".Cinematica"
             android:screenOrientation="landscape"
-            android:theme="@style/AppTheme" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.plataformanext.delta.Cinematica" />
-        </activity>
-        <activity
-            android:name=".demo.VelocidadeDemo"
-            android:label="@string/title_activity_velocidade_demo"
-            android:parentActivityName=".Cinematica"
-            android:theme="@style/AppTheme" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.plataformanext.delta.Cinematica" />
-        </activity>
-        <activity
-            android:name=".demo.TorriceliDemo"
-            android:label="@string/title_activity_torriceli_demo"
-            android:parentActivityName=".Cinematica"
             android:theme="@style/AppTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -207,6 +172,16 @@
             android:name=".demo.AcMediaDemo"
             android:label="@string/title_activity_acmedia_demo"
             android:parentActivityName=".Cinematica"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.plataformanext.delta.Cinematica" />
+        </activity>
+        <activity
+            android:name=".aulas.AulaAceleracao"
+            android:label="@string/title_activity_aula_aceleracao"
+            android:parentActivityName=".Cinematica"
+            android:screenOrientation="landscape"
             android:theme="@style/AppTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

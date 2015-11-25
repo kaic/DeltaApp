@@ -1,11 +1,8 @@
 package com.plataformanext.delta.aulas;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
@@ -27,7 +24,8 @@ public class AulaVelocidade extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         sliderShow = (SliderLayout) findViewById(R.id.sliderVelocidade);
-        sliderShow.setDuration(4000);
+        sliderShow.setDuration(0);
+        sliderShow.startAutoCycle(5000, 5000, true);
 
         DefaultSliderView slide1 = new DefaultSliderView(this);
         slide1.image(R.drawable.velocidade_1);

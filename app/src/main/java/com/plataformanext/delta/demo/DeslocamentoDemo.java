@@ -37,7 +37,7 @@ public class DeslocamentoDemo extends AppCompatActivity {
     private ConnectedThread mConnectedThread;
     private static final UUID BTMODULEUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
     private static String address;
-    private TextView txtKM, txtMS;
+    private TextView txtDeslocamento;
     private String dataInPrint;
     private LineChart mChart;
 
@@ -53,8 +53,7 @@ public class DeslocamentoDemo extends AppCompatActivity {
 
         mChart = (LineChart) findViewById(R.id.chartDeslocamento);
 
-        mChart.setDescription("");
-        mChart.setNoDataTextDescription("You need to provide data for the chart.");
+        mChart.setDescription("Deslocamento x Tempo");
         mChart.setTouchEnabled(true);
         mChart.setDragEnabled(true);
         mChart.setScaleEnabled(true);
@@ -77,12 +76,14 @@ public class DeslocamentoDemo extends AppCompatActivity {
 
         YAxis leftAxis = mChart.getAxisLeft();
         leftAxis.setTextColor(Color.WHITE);
-        leftAxis.setAxisMaxValue(100f);
+        leftAxis.setAxisMaxValue(50f);
         leftAxis.setAxisMinValue(0f);
-        leftAxis.setStartAtZero(false);
+        leftAxis.setStartAtZero(true);
         leftAxis.setDrawGridLines(true);
         YAxis rightAxis = mChart.getAxisRight();
         rightAxis.setEnabled(false);
+
+        txtDeslocamento = (TextView) findViewById(R.id.txtDeslocamento);
 
         bluetoothIn = new Handler() {
             public void handleMessage(android.os.Message msg) {
@@ -94,7 +95,9 @@ public class DeslocamentoDemo extends AppCompatActivity {
                     if (endOfLineIndex > 0) {
                         dataInPrint = recDataString.substring(0, endOfLineIndex);
                         int d = dataInPrint.indexOf("d");
-                        String deslocamento = dataInPrint.substring(d+1, endOfLineIndex);
+                        int c = dataInPrint.indexOf("c");
+                        String deslocamento = dataInPrint.substring(d+1, c+1);
+                        txtDeslocamento.setText(deslocamento);
                         feedMultiple(deslocamento);
 
                     }

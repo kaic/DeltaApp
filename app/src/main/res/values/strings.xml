@@ -40,6 +40,7 @@
     <string name="title_activity_torriceli_demo">Equação de Torriceli</string>
     <string name="title_activity_conversao_demo">Conversão de Velocidade</string>
     <string name="title_activity_velocidade_demo">Velocidade Média</string>
+    <string name="title_activity_aula_aceleracao">AulaAceleracao</string>
 
 
 </resources>

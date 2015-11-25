@@ -53,7 +53,7 @@ public class ConversaoDemo extends AppCompatActivity {
 
                     if (endOfLineIndex > 0) {
                         dataInPrint = recDataString.substring(0, endOfLineIndex);
-                        int ms = dataInPrint.indexOf("m");
+                        int ms = dataInPrint.indexOf("w");
                         int km = dataInPrint.indexOf("k");
                         int d = dataInPrint.indexOf("d");
                         String m = dataInPrint.substring(ms+1, km+1);

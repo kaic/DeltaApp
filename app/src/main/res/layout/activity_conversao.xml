@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Converter"
-        android:id="@+id/button"
+        android:id="@+id/cKM"
         android:layout_gravity="center_horizontal"
         android:textColor="@color/Text"
         android:onClick="calculo"
@@ -74,10 +74,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Converter"
-        android:id="@+id/converterC"
+        android:id="@+id/cM"
         android:layout_gravity="center_horizontal"
         android:textColor="@color/Text"
-        android:onClick="conversao"
         android:layout_weight="0.1" />
 
 </LinearLayout>
