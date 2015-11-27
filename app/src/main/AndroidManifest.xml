@@ -28,14 +28,6 @@
                 android:value=".Cinematica" />
         </activity>
         <activity
-            android:name=".calculos.VelocidadeMedia"
-            android:label="@string/title_activity_velocidade_media"
-            android:parentActivityName=".Cinematica" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Cinematica" />
-        </activity>
-        <activity
             android:name=".Cinematica"
             android:label="@string/title_activity_cinematica"
             android:parentActivityName=".MainActivity" >
@@ -50,14 +42,6 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.plataformanext.delta.MainActivity" />
-        </activity>
-        <activity
-            android:name=".calculos.fhe"
-            android:label="@string/title_activity_fhe"
-            android:parentActivityName=".Cinematica" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.plataformanext.delta.Cinematica" />
         </activity>
         <activity
             android:name=".SplashScreen"
@@ -83,15 +67,6 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.plataformanext.delta.MainActivity" />
-        </activity>
-        <activity
-            android:name=".calculos.LGUN"
-            android:label="@string/title_activity_lgun"
-            android:parentActivityName=".FG"
-            android:theme="@style/AppTheme" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.plataformanext.delta.FG" />
         </activity>
         <activity
             android:name=".aulas.AulaGeral"

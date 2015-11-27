@@ -14,15 +14,6 @@
         android:elevation="4dp"
         />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="KM/H para M/S"
-        android:id="@+id/textView"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center_horizontal" />
-
     <android.support.design.widget.TextInputLayout
         android:id="@+id/message_wrapper"
         android:layout_width="match_parent"
@@ -32,29 +23,10 @@
             android:id="@+id/conversaoKm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="KM/H"
+            android:hint="VELOCIDADE"
             android:numeric="decimal"
             android:inputType="numberDecimal" />
     </android.support.design.widget.TextInputLayout>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Converter"
-        android:id="@+id/cKM"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@color/Text"
-        android:onClick="calculo"
-        android:layout_weight="0.1" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="M/S para KM/H"
-        android:id="@+id/textView2"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center_horizontal" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/message_wrapper2"
@@ -65,18 +37,28 @@
             android:id="@+id/conversaoM"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="M/S"
+            android:hint="TEMPO"
             android:numeric="decimal"
             android:inputType="numberDecimal" />
     </android.support.design.widget.TextInputLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="ACELERAÇÃO MÉDIA"
+        android:id="@+id/textView"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Converter"
-        android:id="@+id/cM"
+        android:text="Calcular"
+        android:id="@+id/cVm"
         android:layout_gravity="center_horizontal"
         android:textColor="@color/Text"
-        android:layout_weight="0.1" />
+        android:layout_weight="0.1"
+        android:layout_marginTop="20dp" />
 
 </LinearLayout>

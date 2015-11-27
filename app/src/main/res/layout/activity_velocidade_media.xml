@@ -1,10 +1,11 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="1">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbarMedia"
+        android:id="@+id/toolbarConversao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="?actionBarSize"
@@ -13,67 +14,51 @@
         android:elevation="4dp"
         />
 
-    <EditText
-        android:layout_width="wrap_content"
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/message_wrapper"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edtDistancia"
-        android:layout_marginTop="20dp"
-        android:paddingRight="10dp"
-        android:width="100dp"
-        android:inputType="number|numberDecimal"
-        android:layout_below="@+id/toolbarMedia"
-        android:singleLine="false" />
+        android:paddingTop="20dp">
+        <EditText
+            android:id="@+id/conversaoKm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="DESLOCAMENTO"
+            android:numeric="decimal"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
 
-    <EditText
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/message_wrapper2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp">
+        <EditText
+            android:id="@+id/conversaoM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="TEMPO"
+            android:numeric="decimal"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/edtTempo"
-        android:paddingRight="10dp"
-        android:width="100dp"
-        android:inputType="number|numberDecimal"
-        android:layout_alignTop="@+id/edtDistancia"
-        android:layout_toRightOf="@+id/textView4"
-        android:layout_toEndOf="@+id/textView4" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="VELOCIDADE"
+        android:id="@+id/textView"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Calcular e Adicionar ao Gráfico"
-        android:id="@+id/btnM"
-        android:onClick="velocidade"
-        android:layout_below="@+id/edtTempo" />
+        android:text="Calcular"
+        android:id="@+id/cVm"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/Text"
+        android:layout_weight="0.1"
+        android:layout_marginTop="20dp" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/edtResultado"
-        android:paddingRight="10dp"
-        android:width="100dp"
-        android:inputType="number|numberDecimal"
-        android:text="KM/H"
-        android:layout_above="@+id/btnM"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="="
-        android:id="@+id/textView3"
-        android:layout_above="@+id/btnM"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="/"
-        android:id="@+id/textView4"
-        android:layout_alignBaseline="@+id/edtDistancia"
-        android:layout_alignBottom="@+id/edtDistancia"
-        android:layout_toRightOf="@+id/edtDistancia"
-        android:layout_toEndOf="@+id/edtDistancia" />
-
-
-</RelativeLayout>
+</LinearLayout>

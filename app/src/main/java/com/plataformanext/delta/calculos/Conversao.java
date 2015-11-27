@@ -51,7 +51,7 @@ public class Conversao extends AppCompatActivity {
                 break;
             case 2:
                 setContentView(R.layout.activity_velocidade_media);
-                mToolbar = (Toolbar) findViewById(R.id.toolbarMedia);
+                mToolbar = (Toolbar) findViewById(R.id.toolbarConversao);
                 setSupportActionBar(mToolbar);
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
                 break;

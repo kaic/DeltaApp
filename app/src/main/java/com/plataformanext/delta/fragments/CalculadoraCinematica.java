@@ -46,7 +46,7 @@ public class CalculadoraCinematica extends android.support.v4.app.Fragment  impl
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(llm);
 
-        mList = getSetCalcList(18);
+        mList = getSetCalcList(14);
         CalculadoraAdapter adapter = new CalculadoraAdapter(getActivity(), mList);
         adapter.setRecyclerViewOnClickListenerHack(this);
         mRecyclerView.setAdapter(adapter);
@@ -85,17 +85,14 @@ public class CalculadoraCinematica extends android.support.v4.app.Fragment  impl
                 "Função horária da velocidade",
                 "Função horária do espaço",
                 "Equação de Torricelli",
-                "Espaço angular",
-                "Deslocamento Angular",
+                "Espaço angular/Deslocamento Angular",
                 "Velocidade Angular Media",
-                "Aceleração Angular Media",
                 "Aceleração Centrípeta",
                 "Equação horária do espaço angular",
-                "Aceleração média",
                 "Função horária da velocidade",
-                "Função horária do espaço angular",
-                "Torricelli"
+                "Função horária do espaço angular"
         };
+
         String[] conteudo = new String[]{
                 "Velocidade",
                 "Velocidade",
@@ -107,12 +104,8 @@ public class CalculadoraCinematica extends android.support.v4.app.Fragment  impl
                 "MRUV",
                 "Movimento Circular",
                 "Movimento Circular",
-                "Movimento Circular",
-                "Movimento Circular",
                 "Movimento Circular Uniforme (MCU)",
                 "Movimento Circular Uniforme (MCU)",
-                "Movimento Circular Uniformemente Variado (MCUV)",
-                "Movimento Circular Uniformemente Variado (MCUV)",
                 "Movimento Circular Uniformemente Variado (MCUV)",
                 "Movimento Circular Uniformemente Variado (MCUV)"
         };

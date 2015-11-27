@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import com.plataformanext.delta.R;
 import com.plataformanext.delta.adapters.CalculadoraAdapter;
 import com.plataformanext.delta.calculos.Conversao;
-import com.plataformanext.delta.calculos.VelocidadeMedia;
 import com.plataformanext.delta.domain.Calculadora;
 import com.plataformanext.delta.interfaces.RecyclerViewOnClickListenerHack;
 
@@ -61,10 +60,6 @@ public class CalculadoraEstatica extends android.support.v4.app.Fragment impleme
         switch (position){
             case 0:
                 i = new Intent(getActivity(), Conversao.class);
-                startActivity(i);
-                break;
-            case 1:
-                i = new Intent(getActivity(), VelocidadeMedia.class);
                 startActivity(i);
                 break;
 
