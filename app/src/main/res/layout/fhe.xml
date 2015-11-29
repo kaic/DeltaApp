@@ -5,7 +5,7 @@
     android:weightSum="1">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbarConversao"
+        android:id="@+id/toolbarFhe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="?actionBarSize"
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="20dp">
         <EditText
-            android:id="@+id/conversaoKm"
+            android:id="@+id/FheEI"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="ESPAÇO INICIAL"
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="20dp">
         <EditText
-            android:id="@+id/conversaoKm1"
+            android:id="@+id/FheVI"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="VELOCIDADE INICIAL"
@@ -46,10 +46,10 @@
         android:layout_height="wrap_content"
         android:paddingTop="20dp">
         <EditText
-            android:id="@+id/conversaoK3m"
+            android:id="@+id/FheA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="VELOCIDADE"
+            android:hint="ACELERAÇÃO"
             android:numeric="decimal"
             android:inputType="numberDecimal" />
     </android.support.design.widget.TextInputLayout>
@@ -60,7 +60,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="20dp">
         <EditText
-            android:id="@+id/conversaoM"
+            android:id="@+id/FheT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="TEMPO"
@@ -73,7 +73,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="DESLOCAMENTO"
-        android:id="@+id/textView"
+        android:id="@+id/txtFhe"
         android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal" />
 
@@ -81,7 +81,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Calcular"
-        android:id="@+id/cVm"
+        android:id="@+id/btnFhe"
         android:layout_gravity="center_horizontal"
         android:textColor="@color/Text"
         android:layout_weight="0.1"

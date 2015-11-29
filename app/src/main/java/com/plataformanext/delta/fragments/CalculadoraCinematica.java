@@ -72,6 +72,13 @@ public class CalculadoraCinematica extends android.support.v4.app.Fragment  impl
                 startActivity(i);
                 break;
 
+            case 6:
+                i = new Intent(getActivity(), Conversao.class);
+                parametro = 6;
+                i.putExtra("parametro", parametro);
+                startActivity(i);
+                break;
+
         }
     }
 
@@ -88,7 +95,6 @@ public class CalculadoraCinematica extends android.support.v4.app.Fragment  impl
                 "Espaço angular/Deslocamento Angular",
                 "Velocidade Angular Media",
                 "Aceleração Centrípeta",
-                "Equação horária do espaço angular",
                 "Função horária da velocidade",
                 "Função horária do espaço angular"
         };
@@ -104,7 +110,6 @@ public class CalculadoraCinematica extends android.support.v4.app.Fragment  impl
                 "MRUV",
                 "Movimento Circular",
                 "Movimento Circular",
-                "Movimento Circular Uniforme (MCU)",
                 "Movimento Circular Uniforme (MCU)",
                 "Movimento Circular Uniformemente Variado (MCUV)",
                 "Movimento Circular Uniformemente Variado (MCUV)"

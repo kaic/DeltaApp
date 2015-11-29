@@ -49,10 +49,4 @@ public class Dinamica extends AppCompatActivity {
         tabs.setViewPager(pager);
         pager.setCurrentItem(0);
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_cinematica, menu);
-        return true;
-    }
 }

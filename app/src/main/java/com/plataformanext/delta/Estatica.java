@@ -47,5 +47,4 @@ public class Estatica extends AppCompatActivity {
         tabs.setViewPager(pager);
         pager.setCurrentItem(0);
     }
-
 }

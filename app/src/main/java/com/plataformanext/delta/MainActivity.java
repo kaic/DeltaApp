@@ -89,12 +89,6 @@ public class MainActivity extends ActionBarActivity implements RecyclerViewOnCli
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
     public void AulaMecanica(View view) {
         Intent i = new Intent(this, AulaGeral.class);
         startActivity(i);

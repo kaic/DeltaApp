@@ -25,21 +25,16 @@ public class AulaGeral extends AppCompatActivity {
 
         sliderShow = (SliderLayout) findViewById(R.id.sliderGeral);
         sliderShow.setDuration(0);
-        sliderShow.startAutoCycle(5000, 5000, true);
+        sliderShow.startAutoCycle(50000, 50000, true);
 
         DefaultSliderView slide1 = new DefaultSliderView(this);
         slide1.image(R.drawable.mecanica_01);
         DefaultSliderView slide2 = new DefaultSliderView(this);
         slide2.image(R.drawable.mecanica_02);
-        DefaultSliderView slide3 = new DefaultSliderView(this);
-        slide3.image(R.drawable.cinematica_1);
-        DefaultSliderView slide4 = new DefaultSliderView(this);
-        slide4.image(R.drawable.cinematica_2);
 
         sliderShow.addSlider(slide1);
         sliderShow.addSlider(slide2);
-        sliderShow.addSlider(slide3);
-        sliderShow.addSlider(slide4);
+
     }
 
     @Override

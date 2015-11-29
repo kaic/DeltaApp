@@ -21,7 +21,7 @@
         </activity>
         <activity
             android:name=".calculos.Conversao"
-            android:label="@string/title_activity_conversao"
+            android:label="Calculos"
             android:parentActivityName=".Cinematica" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

@@ -51,7 +51,7 @@ public class AulasEstatica extends android.support.v4.app.Fragment implements Re
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(llm);
 
-        mList = getSetAulasList(2);
+        mList = getSetAulasList(16);
         AulasAdapter adapter = new AulasAdapter(getActivity(), mList);
         adapter.setRecyclerViewOnClickListenerHack(this);
         mRecyclerView.setAdapter(adapter);
@@ -76,8 +76,42 @@ public class AulasEstatica extends android.support.v4.app.Fragment implements Re
     }
 
     public List<Aulas> getSetAulasList(int qtd) {
-        String[] nome = new String[]{"Velocidade", "Vetores"};
-        String[] materia = new String[]{"Velocidade normal, escalar, vetorial, angular e relativa", "Vetores e Operações"};
+        String[] nome = new String[]{
+                "Estática",
+                "Hisdrostática",
+                "Transmissibilidade das Forças",
+                "Equilíbrio",
+                "Movimento de uma Força",
+                "Fluído",
+                "Pressão",
+                "Densidade",
+                "Pressão Hidroestática",
+                "Pressão Atmosférica",
+                "Teorema de Stevin",
+                "Teorema de Pascal",
+                "Prensa Hidráulica",
+                "Empuxo",
+                "Teorema de Arquimedes",
+                "Peso Aparente"
+        };
+        String[] materia = new String[]{
+                "Apresentação",
+                "Apresentação",
+                "",
+                "",
+                "Equilíbrio de Translação e Rotação",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+        };
         List<Aulas> listAux = new ArrayList<>();
 
         for (int i = 0; i < qtd; i++) {

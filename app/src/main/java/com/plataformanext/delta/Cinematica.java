@@ -53,12 +53,6 @@ public class Cinematica extends AppCompatActivity {
         pager.setCurrentItem(0);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_cinematica, menu);
-        return true;
-    }
-
     public void Axis(View view) {
         Intent i = new Intent(this, DeviceListActivity.class);
         startActivity(i);

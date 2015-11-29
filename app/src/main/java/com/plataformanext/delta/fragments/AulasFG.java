@@ -51,7 +51,7 @@ public class AulasFG extends android.support.v4.app.Fragment implements Recycler
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(llm);
 
-        mList = getSetAulasList(2);
+        mList = getSetAulasList(4);
         AulasAdapter adapter = new AulasAdapter(getActivity(), mList);
         adapter.setRecyclerViewOnClickListenerHack(this);
         mRecyclerView.setAdapter(adapter);
@@ -76,8 +76,18 @@ public class AulasFG extends android.support.v4.app.Fragment implements Recycler
     }
 
     public List<Aulas> getSetAulasList(int qtd) {
-        String[] nome = new String[]{"Velocidade", "Vetores"};
-        String[] materia = new String[]{"Velocidade normal, escalar, vetorial, angular e relativa", "Vetores e Operações"};
+        String[] nome = new String[]{
+                "Força Gravitacional",
+                "Lei da Gravitação Universal de Newton",
+                "Leis de Kepler",
+                "Unidades Astronômicas"
+        };
+        String[] materia = new String[]{
+                "Apresentação",
+                "",
+                "1ª,2ª e 3ª - Leis de Kepler",
+                "Unidade Astronômica, Ano-luz e Parsec"
+        };
         List<Aulas> listAux = new ArrayList<>();
 
         for (int i = 0; i < qtd; i++) {

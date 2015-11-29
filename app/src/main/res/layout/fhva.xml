@@ -5,7 +5,7 @@
     android:weightSum="1">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbarFhe"
+        android:id="@+id/toolbarEA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="?actionBarSize"
@@ -20,10 +20,10 @@
         android:layout_height="wrap_content"
         android:paddingTop="20dp">
         <EditText
-            android:id="@+id/conversaoKm"
+            android:id="@+id/deslocamentoVA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="ESPAÇO INICIAL"
+            android:hint="DESLOCAMENTO ANGULAR"
             android:numeric="decimal"
             android:inputType="numberDecimal" />
     </android.support.design.widget.TextInputLayout>
@@ -34,24 +34,10 @@
         android:layout_height="wrap_content"
         android:paddingTop="20dp">
         <EditText
-            android:id="@+id/conversaoM"
+            android:id="@+id/tempoVA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="TEMPO"
-            android:numeric="decimal"
-            android:inputType="numberDecimal" />
-    </android.support.design.widget.TextInputLayout>
-
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/message_wrapper3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="20dp">
-        <EditText
-            android:id="@+id/conversaoM1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="VELOCIDADE"
             android:numeric="decimal"
             android:inputType="numberDecimal" />
     </android.support.design.widget.TextInputLayout>
@@ -60,8 +46,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="DESLOCAMENTO"
-        android:id="@+id/textView"
+        android:text="VELOCIDADE ANGULAR"
+        android:id="@+id/txtVA"
         android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal" />
 
@@ -69,7 +55,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Calcular"
-        android:id="@+id/cVm"
+        android:id="@+id/btnVA"
         android:layout_gravity="center_horizontal"
         android:textColor="@color/Text"
         android:layout_weight="0.1"

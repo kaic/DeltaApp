@@ -52,7 +52,7 @@ public class AulasCinematica extends android.support.v4.app.Fragment implements 
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(llm);
 
-        mList = getSetAulasList(3);
+        mList = getSetAulasList(7);
         AulasAdapter adapter = new AulasAdapter(getActivity(), mList);
         adapter.setRecyclerViewOnClickListenerHack(this);
         mRecyclerView.setAdapter(adapter);
@@ -70,7 +70,7 @@ public class AulasCinematica extends android.support.v4.app.Fragment implements 
                 startActivity(i);
                 break;
             case 1:
-                i = new Intent(getActivity(), AulaAceleracao.class);
+                i = new Intent(getActivity(), AulaVelocidade.class);
                 startActivity(i);
                 break;
             case 2:
@@ -81,8 +81,27 @@ public class AulasCinematica extends android.support.v4.app.Fragment implements 
     }
 
     public List<Aulas> getSetAulasList(int qtd) {
-        String[] nome = new String[]{"Velocidade", "Aceleração", "Vetores"};
-        String[] materia = new String[]{"Velocidade normal, escalar, vetorial, angular e relativa", "Aceleração", "Vetores e Operações"};
+        String[] nome = new String[]{
+                "Cinemática",
+                "Velocidade",
+                "Aceleração",
+                "Vetores",
+                "Operações com Vetores",
+                "Movimento Retilínio Uniforme",
+                "Movimento Retilínio Uniformemente Variado",
+                "Movimento Circular",
+
+        };
+        String[] materia = new String[]{
+                "Apresentação",
+                "Velocidade Vetorial, Angular e Relativa",
+                "Aceleração Escalar, Vetorial, Tangencial entre outros",
+                "Módulo, Direção e Sentido",
+                "Regras e Operações",
+                "",
+                "Função Horária, Torricelli, Queda Livre entre outros",
+                "M.C. Uniforme e Uniformemente variado"
+        };
         List<Aulas> listAux = new ArrayList<>();
 
         for (int i = 0; i < qtd; i++) {

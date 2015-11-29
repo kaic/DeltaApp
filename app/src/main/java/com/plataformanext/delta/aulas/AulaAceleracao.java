@@ -25,7 +25,7 @@ public class AulaAceleracao extends AppCompatActivity {
 
         sliderShow = (SliderLayout) findViewById(R.id.sliderGeral);
         sliderShow.setDuration(0);
-        sliderShow.startAutoCycle(5000, 5000, true);
+        sliderShow.startAutoCycle(50000, 5000, true);
 
         DefaultSliderView slide1 = new DefaultSliderView(this);
         slide1.image(R.drawable.mecanica_01);

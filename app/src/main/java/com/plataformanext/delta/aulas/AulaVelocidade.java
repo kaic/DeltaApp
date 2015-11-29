@@ -25,7 +25,7 @@ public class AulaVelocidade extends AppCompatActivity {
 
         sliderShow = (SliderLayout) findViewById(R.id.sliderVelocidade);
         sliderShow.setDuration(0);
-        sliderShow.startAutoCycle(5000, 5000, true);
+        sliderShow.startAutoCycle(50000, 50000, true);
 
         DefaultSliderView slide1 = new DefaultSliderView(this);
         slide1.image(R.drawable.velocidade_1);
