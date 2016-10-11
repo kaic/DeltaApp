@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbarHidrostatica"
+        layout="@layout/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        />
+
+    <com.plataformanext.delta.extras.SlidingTabLayout
+        android:id="@+id/tabsHidrostatica"
+        android:background="@color/ColorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pagerHidrostatica"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+</LinearLayout>
+<!-- From: file:/D:/TCC/Projeto/Delta/app/src/main/res/layout/activity_hidrostatica.xml -->

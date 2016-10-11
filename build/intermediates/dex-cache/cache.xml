@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\TCC\Projeto\Delta\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="D:\TCC\Projeto\Delta\app\build\intermediates\pre-dexed\debug\classes-5d48b9f777df33f60e09d265a68ea5bbf67baab9.jar" />
+    </item>
+    <item
+        jar="D:\TCC\Projeto\Delta\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="D:\TCC\Projeto\Delta\app\build\intermediates\pre-dexed\debug\classes-8958f44f102c8fe330f87e8bf2ddda5fcad67432.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kaic\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="D:\TCC\Projeto\Delta\app\build\intermediates\pre-dexed\debug\library-2.4.0-f894251849dba993a92cf810cd05bce38ca1aacd.jar" />
+    </item>
+    <item
+        jar="D:\TCC\Projeto\Delta\app\build\intermediates\exploded-aar\com.github.clans\fab\1.6.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ca504182198db4a0f81779ca3fe391374c8cb66a">
+        <dex dex="D:\TCC\Projeto\Delta\app\build\intermediates\pre-dexed\debug\classes-b0818c05989a8ba9085a59ce2deaca5f88da15f3.jar" />
+    </item>
+    <item
+        jar="D:\TCC\Projeto\Delta\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d96886efea7cc74fbb3abd0e3b51d5638fc57be0">
+        <dex dex="D:\TCC\Projeto\Delta\app\build\intermediates\pre-dexed\debug\classes-48d505947b6752a43906fc1d0a347a3323e50ccc.jar" />
+    </item>
+    <item
+        jar="D:\TCC\Projeto\Delta\app\build\intermediates\exploded-aar\com.daimajia.slider\library\1.1.5\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="08962e03b6a954c65d4944e092879b7f5ee1208d">
+        <dex dex="D:\TCC\Projeto\Delta\app\build\intermediates\pre-dexed\debug\classes-c0ab5fdcfbdeeb9fdcb7b0857ae6b01257a3ef14.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kaic\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="D:\TCC\Projeto\Delta\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.0-4a37bd9deb60d89c4322d6a1ab8c1c88840dfc9a.jar" />
+    </item>
+    <item
+        jar="D:\TCC\Projeto\Delta\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="D:\TCC\Projeto\Delta\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-ffd422e54e6fa3df23542f0b5607e0257d7b557b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kaic\.gradle\caches\modules-2\files-2.1\com.github.PhilJay\MPAndroidChart\v2.1.4\e075f4e80e11780d6d5262fee9fcfb859fa55864\MPAndroidChart-v2.1.4.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e075f4e80e11780d6d5262fee9fcfb859fa55864">
+        <dex dex="D:\TCC\Projeto\Delta\app\build\intermediates\pre-dexed\debug\MPAndroidChart-v2.1.4-80e2b37ff3ed1f06e5c6642072d2bebcdbbd8acd.jar" />
+    </item>
+    <item
+        jar="D:\TCC\Projeto\Delta\app\build\intermediates\exploded-aar\com.android.support\design\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="19026d31f5d3ae868db81319671a642be5fbba08">
+        <dex dex="D:\TCC\Projeto\Delta\app\build\intermediates\pre-dexed\debug\classes-82881f993869b50ad8498285ad9e0bbe215747d2.jar" />
+    </item>
+    <item
+        jar="C:\Users\Kaic\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.3.2\d6b7f0093cec6c9faf65dbfd6a6a345d0ed25e27\picasso-2.3.2.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d6b7f0093cec6c9faf65dbfd6a6a345d0ed25e27">
+        <dex dex="D:\TCC\Projeto\Delta\app\build\intermediates\pre-dexed\debug\picasso-2.3.2-536b29d0abd20494b942fa940fd006d23bbf90f5.jar" />
+    </item>
+    <item
+        jar="D:\TCC\Projeto\Delta\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="D:\TCC\Projeto\Delta\app\build\intermediates\pre-dexed\debug\classes-9e420066e84d29a7ebec4d130a831e4ad990faf4.jar" />
+    </item>
+
+</items>

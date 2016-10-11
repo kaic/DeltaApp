@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.plataformanext.delta"
+    android:versionCode="3"
+    android:versionName="1.2" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.plataformanext.delta.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.plataformanext.delta.axis.DeviceListActivity"
+            android:label="@string/title_activity_device_list"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="com.plataformanext.delta.calculos.Conversao"
+            android:label="Calculos"
+            android:parentActivityName="com.plataformanext.delta.Cinematica" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Cinematica" />
+        </activity>
+        <activity
+            android:name="com.plataformanext.delta.Cinematica"
+            android:label="@string/title_activity_cinematica"
+            android:parentActivityName="com.plataformanext.delta.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name="com.plataformanext.delta.Dinamica"
+            android:label="@string/title_activity_dinamica"
+            android:parentActivityName="com.plataformanext.delta.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.plataformanext.delta.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.plataformanext.delta.SplashScreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.plataformanext.delta.Estatica"
+            android:label="@string/title_activity_estatica"
+            android:parentActivityName="com.plataformanext.delta.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.plataformanext.delta.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.plataformanext.delta.FG"
+            android:label="@string/title_activity_fg"
+            android:parentActivityName="com.plataformanext.delta.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.plataformanext.delta.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.plataformanext.delta.aulas.AulaGeral"
+            android:label="@string/title_activity_aula_geral"
+            android:parentActivityName="com.plataformanext.delta.MainActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.plataformanext.delta.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.plataformanext.delta.aulas.AulaVelocidade"
+            android:label="@string/title_activity_aula_velocidade"
+            android:parentActivityName="com.plataformanext.delta.Cinematica"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.plataformanext.delta.Cinematica" />
+        </activity>
+        <activity
+            android:name="com.plataformanext.delta.aulas.AulaVetores"
+            android:label="@string/title_activity_aula_vetores"
+            android:parentActivityName="com.plataformanext.delta.Cinematica"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.plataformanext.delta.Cinematica" />
+        </activity>
+        <activity
+            android:name="com.plataformanext.delta.demo.FHVDemo"
+            android:label="@string/title_activity_fhv_demo"
+            android:parentActivityName="com.plataformanext.delta.Cinematica"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.plataformanext.delta.Cinematica" />
+        </activity>
+        <activity
+            android:name="com.plataformanext.delta.demo.FHEDemo"
+            android:label="@string/title_activity_fhe_demo"
+            android:parentActivityName="com.plataformanext.delta.Cinematica"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.plataformanext.delta.Cinematica" />
+        </activity>
+        <activity
+            android:name="com.plataformanext.delta.demo.EHEDemo"
+            android:label="@string/title_activity_ehe_demo"
+            android:parentActivityName="com.plataformanext.delta.Cinematica"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.plataformanext.delta.Cinematica" />
+        </activity>
+        <activity
+            android:name="com.plataformanext.delta.demo.DeslocamentoDemo"
+            android:label="@string/title_activity_deslocamento_demo"
+            android:parentActivityName="com.plataformanext.delta.Cinematica"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.plataformanext.delta.Cinematica" />
+        </activity>
+        <activity
+            android:name="com.plataformanext.delta.demo.ConversaoDemo"
+            android:label="@string/title_activity_conversao_demo"
+            android:parentActivityName="com.plataformanext.delta.Cinematica"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.plataformanext.delta.Cinematica" />
+        </activity>
+        <activity
+            android:name="com.plataformanext.delta.demo.AcMediaDemo"
+            android:label="@string/title_activity_acmedia_demo"
+            android:parentActivityName="com.plataformanext.delta.Cinematica"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.plataformanext.delta.Cinematica" />
+        </activity>
+        <activity
+            android:name="com.plataformanext.delta.aulas.AulaAceleracao"
+            android:label="@string/title_activity_aula_aceleracao"
+            android:parentActivityName="com.plataformanext.delta.Cinematica"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.plataformanext.delta.Cinematica" />
+        </activity>
+    </application>
+
+</manifest>

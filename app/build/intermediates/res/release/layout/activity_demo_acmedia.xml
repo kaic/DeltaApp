@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarDemoAcMedia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?actionBarSize"
+        android:background="@color/ColorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:elevation="4dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Aceleração:"
+        android:id="@+id/txtAce"
+        android:textSize="50dp"
+        android:layout_below="@+id/toolbarDemoAcMedia"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Aceleração"
+        android:id="@+id/txtAcel"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/txtAce"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chartAcMedia"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtAcel" />
+
+</RelativeLayout>
+<!-- From: file:/D:/TCC/Projeto/Delta/app/src/main/res/layout/activity_demo_acmedia.xml -->

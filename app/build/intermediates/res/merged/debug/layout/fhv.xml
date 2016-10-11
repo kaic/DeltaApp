@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarConversao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?actionBarSize"
+        android:background="@color/ColorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:elevation="4dp"
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/message_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp">
+        <EditText
+            android:id="@+id/conversaoKm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="VELOCIDADE"
+            android:numeric="decimal"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/message_wrapper2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp">
+        <EditText
+            android:id="@+id/conversaoM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ACELERAÇÃO"
+            android:numeric="decimal"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/message_wrapper3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp">
+        <EditText
+            android:id="@+id/conversaoM1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="TEMPO"
+            android:numeric="decimal"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="VELOCIDADE"
+        android:id="@+id/textView"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:id="@+id/cVm"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/Text"
+        android:layout_weight="0.1"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>

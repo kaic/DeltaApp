@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\Kaic\\Google Drive\\Museu\\ETEC - TCC\\Projeto\\Delta\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_fg.xml",
+        "source": "C:\\Users\\Kaic\\Google Drive\\Museu\\ETEC - TCC\\Projeto\\Delta\\app\\src\\main\\res\\menu\\menu_fg.xml"
+    },
+    {
+        "merged": "C:\\Users\\Kaic\\Google Drive\\Museu\\ETEC - TCC\\Projeto\\Delta\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_dinamica.xml",
+        "source": "C:\\Users\\Kaic\\Google Drive\\Museu\\ETEC - TCC\\Projeto\\Delta\\app\\src\\main\\res\\menu\\menu_dinamica.xml"
+    },
+    {
+        "merged": "C:\\Users\\Kaic\\Google Drive\\Museu\\ETEC - TCC\\Projeto\\Delta\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
+        "source": "C:\\Users\\Kaic\\Google Drive\\Museu\\ETEC - TCC\\Projeto\\Delta\\app\\src\\main\\res\\menu\\menu_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Kaic\\Google Drive\\Museu\\ETEC - TCC\\Projeto\\Delta\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_cinematica.xml",
+        "source": "C:\\Users\\Kaic\\Google Drive\\Museu\\ETEC - TCC\\Projeto\\Delta\\app\\src\\main\\res\\menu\\menu_cinematica.xml"
+    },
+    {
+        "merged": "C:\\Users\\Kaic\\Google Drive\\Museu\\ETEC - TCC\\Projeto\\Delta\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_estatica.xml",
+        "source": "C:\\Users\\Kaic\\Google Drive\\Museu\\ETEC - TCC\\Projeto\\Delta\\app\\src\\main\\res\\menu\\menu_estatica.xml"
+    }
+]

@@ -1,0 +1,31 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_cardDemo"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:visibility="invisible" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:text="Conectar Axis"
+        android:id="@+id/btnAxisCinematica"
+        android:drawableLeft="@drawable/ic_bluetooth"
+        android:layout_gravity="center"
+        android:textColor="@color/Text" />
+
+    <ListView android:id="@+id/paired_devicesCinematica"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stackFromBottom="false"
+        android:layout_weight="1"
+        android:visibility="invisible" />
+
+</FrameLayout><!-- From: file:/D:/TCC/Projeto/Delta/app/src/main/res/layout/fragment_demo_cinematica.xml -->

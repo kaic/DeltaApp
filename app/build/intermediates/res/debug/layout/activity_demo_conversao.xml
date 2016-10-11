@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarDemoConversao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?actionBarSize"
+        android:background="@color/ColorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:elevation="4dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="M/S"
+        android:id="@+id/txtMS"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="KM/H"
+        android:id="@+id/txtKM"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/txtMS"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Velocidade:"
+        android:id="@+id/txtAce"
+        android:layout_above="@+id/txtMS"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="56dp"
+        android:textSize="60dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="KM/H"
+        android:id="@+id/textView8"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignTop="@+id/txtKM"
+        android:layout_toRightOf="@+id/txtKM"
+        android:layout_toEndOf="@+id/txtKM"
+        android:layout_marginLeft="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="M/S"
+        android:id="@+id/textView9"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/txtMS"
+        android:layout_toEndOf="@+id/txtMS"
+        android:layout_marginLeft="25dp" />
+
+
+</RelativeLayout>
+<!-- From: file:/D:/TCC/Projeto/Delta/app/src/main/res/layout/activity_demo_conversao.xml -->

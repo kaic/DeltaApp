@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarDemoDeslocamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?actionBarSize"
+        android:background="@color/ColorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:elevation="4dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Deslocamento:"
+        android:id="@+id/txtBlibe"
+        android:textSize="50dp"
+        android:layout_below="@+id/toolbarDemoDeslocamento"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Deslocamento"
+        android:id="@+id/txtDeslocamento"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/txtBlibe"
+        android:layout_centerHorizontal="true" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chartDeslocamento"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtDeslocamento" />
+
+</RelativeLayout>
